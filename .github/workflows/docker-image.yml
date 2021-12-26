@@ -21,6 +21,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the docker image
-      run: docker build . --file Dockerfile --tag yavuzlar/vulnlab:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/vulnlab:$(date +%s)
     - name: Docker push
-      run: docker push yavuzlar/vulnlab
+      run: docker push ${{secrets.DOCKER_USER}}/vulnlab:latest
