@@ -69,9 +69,9 @@
             {
                 "id": 4,
                 "title": {
-                    "en": "Href",
-                    "tr": "Href",
-                    "fr": "Href",
+                    "en": "HTML Attribute Manipulation",
+                    "tr": "HTML Özellik Manipülasyonu",
+                    "fr": "HTML Attribut Manipulation",
                     "ar": ""
                 },
                 "description": {
@@ -80,7 +80,7 @@
                     "fr": "Trouver la vulnérabilité Xss href.",
                     "ar": ""
                 },
-                "url": "/lab/xss/href-manipulation/",
+                "url": "/lab/xss/html-attribute-manipulation/",
                 "vulnID": 1
             },
             {

@@ -27,7 +27,8 @@ var selectedLanguage = languages.find(x => x.code == (getCookie("lang") || "en")
 const translate = {
     "goBack": {
         "tr": "Geri D&ouml;n",
-        "en": "Go Back"
+        "en": "Go Back",
+        "fr": "Retourner"
     }
 }
 
