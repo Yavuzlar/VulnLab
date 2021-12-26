@@ -28,7 +28,7 @@ $data = json_decode($Raw_Json,true);
           <div class="row mb-4 mt-6">
           <?php foreach ($data as $key=> $val) { ?>
             <div class="col-md-6 mb-4">
-              <a href="<?=__BASEURL__?>/vuln/<?=$val['id'] ?>" class="text-decoration-none text-muted">
+              <a href="/vuln/<?=$val['id'] ?>" class="text-decoration-none text-muted">
               <div class=" border rounded-1 border-700 h-100 features-items">
                 <div class="p-5">
                 <img src="<?=$val['imgURL']; ?>" alt="Dashboard" style="width:48px;height:48px;" />

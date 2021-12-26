@@ -21,34 +21,34 @@ $vuln = getVuln($vulnID);
   <!--    Document Title-->
   <title>VulnLab</title>
   <!--    Favicons-->
-  <link rel="shortcut icon" type="image/x-icon" href="<?= __BASEURL__ ?>/public/assets/img/favicons/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/public/assets/img/favicons/favicon.png">
   <!--    Stylesheets-->
   <link rel="stylesheet" crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==">
-  <link href="<?= __BASEURL__ ?>/public/assets/css/theme.css" rel="stylesheet" />
-  <link href="<?= __BASEURL__ ?>/public/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/public/assets/css/theme.css" rel="stylesheet" />
+  <link href="/public/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
 </head>
 
 <body>
   <main class="main" id="top">
     <!-- NAV START -->
     <nav class="navbar navbar-light sticky-top" data-navbar-darken-on-scroll="900">
-      <div class="container"><a class="navbar-brand" href="<?= __BASEURL__?>"> <img
-            src="<?= __BASEURL__ ?>/public/assets/img/gallery/logo.png" alt="..." /></a>
+      <div class="container"><a class="navbar-brand" href="/index.php"> <img
+            src="/public/assets/img/gallery/logo.png" alt="..." /></a>
         <div class="navbar-nav ms-auto">
         <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     <?php
 
-      echo '<img src="'.__BASEURL__.'/public/assets/img/'.$lang.'.png" style="width: 26px; margin-right:5px;" /> '.getLangName($lang).'';
+      echo '<img src="/public/assets/img/'.$lang.'.png" style="width: 26px; margin-right:5px;" /> '.getLangName($lang).'';
     
     ?>
   </button>
   <ul class="dropdown-menu position-absolute w-100" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#" onclick="setLanguage('en')"><img src="<?= __BASEURL__ ?>/public/assets/img/en.png" style="width: 26px; margin-right:5px;" />English </a></li>
-    <li><a class="dropdown-item" href="#" onclick="setLanguage('tr')"><img src="<?= __BASEURL__ ?>/public/assets/img/tr.png" style="width: 26px; margin-right:5px;" />Türkçe </a></li>
-    <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')"><img src="<?= __BASEURL__ ?>/public/assets/img/fr.png" style="width: 26px; margin-right:5px;" />Français </a></li>
+    <li><a class="dropdown-item" href="#" onclick="setLanguage('en')"><img src="/public/assets/img/en.png" style="width: 26px; margin-right:5px;" />English </a></li>
+    <li><a class="dropdown-item" href="#" onclick="setLanguage('tr')"><img src="/public/assets/img/tr.png" style="width: 26px; margin-right:5px;" />Türkçe </a></li>
+    <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')"><img src="/public/assets/img/fr.png" style="width: 26px; margin-right:5px;" />Français </a></li>
   </ul>
 </div>
 
@@ -76,7 +76,7 @@ $vuln = getVuln($vulnID);
               ?>
               <div class="row mb-3">
                 <div class="col-md-12">
-                <a href="<?=__BASEURL__?><?=$lab['url'] ?>" class="text-decoration-none text-muted">
+                <a href="<?=$lab['url'] ?>" class="text-decoration-none text-muted">
                   <div class="border rounded-1 border-700 h-100 features-items">
                     <div class="p-4">
                       <h3 class="lh-base"><?= $lab["title"][$lang] ?></h3>
@@ -116,16 +116,16 @@ $vuln = getVuln($vulnID);
         <div class="row">
             <div class="col-xl-7 text-center text-xl-start">
                 <!-- <a href="#!">
-                    <img class="footer-img me-xl-5 me-3" src="<?= __BASEURL__ ?>/public/assets/img/gallery/facebook-line1.svg" alt="fb" style="width:20px;height:20px;" />
+                    <img class="footer-img me-xl-5 me-3" src="/public/assets/img/gallery/facebook-line1.svg" alt="fb" style="width:20px;height:20px;" />
                 </a> -->
                 <a href="https://www.linkedin.com/company/siberyavuzlar/">
-                    <img class="footer-img me-xl-5 me-3" src="<?= __BASEURL__ ?>/public/assets/img/gallery/linkedin-line1.svg" alt="in" style="width:20px;height:20px;" />
+                    <img class="footer-img me-xl-5 me-3" src="/public/assets/img/gallery/linkedin-line1.svg" alt="in" style="width:20px;height:20px;" />
                 </a>
                 <a href="https://twitter.com/siberyavuzlar/">
-                    <img class="footer-img me-xl-5 me-3" src="<?= __BASEURL__ ?>/public/assets/img/gallery/twitter-line1.svg" alt="twitter" style="width:20px;height:20px;" />
+                    <img class="footer-img me-xl-5 me-3" src="/public/assets/img/gallery/twitter-line1.svg" alt="twitter" style="width:20px;height:20px;" />
                 </a>
                 <a href="https://www.instagram.com/siberyavuzlar/">
-                    <img class="footer-img me-xl-5 me-3" src="<?= __BASEURL__ ?>/public/assets/img/gallery/instagram-line1.svg" alt="instragram" style="width:20px;height:20px;" />
+                    <img class="footer-img me-xl-5 me-3" src="/public/assets/img/gallery/instagram-line1.svg" alt="instragram" style="width:20px;height:20px;" />
                 </a>
             </div>
        
@@ -143,14 +143,14 @@ $vuln = getVuln($vulnID);
 
 
 <!--    JavaScripts START-->
-<script src="<?= __BASEURL__ ?>/public/vendors/@popperjs/popper.min.js"></script>
-<script src="<?= __BASEURL__ ?>/public/vendors/bootstrap/bootstrap.min.js"></script>
-<script src="<?= __BASEURL__ ?>/public/vendors/is/is.min.js"></script>
-<script src="<?= __BASEURL__ ?>/public/vendors/swiper/swiper-bundle.min.js"></script>
+<script src="/public/vendors/@popperjs/popper.min.js"></script>
+<script src="/public/vendors/bootstrap/bootstrap.min.js"></script>
+<script src="/public/vendors/is/is.min.js"></script>
+<script src="/public/vendors/swiper/swiper-bundle.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&amp;display=swap"
     rel="stylesheet">
-<script src="<?= __BASEURL__ ?>/public/assets/js/theme.js"></script>
+<script src="/public/assets/js/theme.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap"rel="stylesheet">
 <!--    JavaScripts END-->
 
