@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^(lab)($|/) - [L]
+RewriteRule ^(vuln)/([0-9]+)$  vuln.php?&id=$2 [L,QSA]

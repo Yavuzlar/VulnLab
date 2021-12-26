@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+    <title>
+        <?php echo $strings['title']; ?>
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="upper justify-content-center" style="text-align: center;margin: 2vh 0vh 6vh 0vh;">
+                <h1>
+                    Galeri
+                </h1>
+                <form action="" method="POST" class="row justify-content-center" style="margin: 2vh 0vh 6vh 0vh;">
+                    <div class="col-md-10 button-con row justify-content-evenly ">
+                        <div class="bottom justify-content-center" style="text-align: center;">
+                            <img class="shadow-lg bg-body rounded img-fluid" style="width:760px;padding : 0; margin-bottom: 0;" src="images/1.png" />
+                        </div>
+                        <div class="btn-group w-75 mt-3">
+                            <button class="btn btn-warning" type="submit" name="next" value="3">İleri</button>
+                            <button class="btn btn-primary" type="submit" name="prev" value="1">Geri</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script id="VLBar" title="<?= $strings['title'] ?>" category-id="1" src="/public/assets/js/vlnav.min.js"></script>
+</body>
+
+</html>

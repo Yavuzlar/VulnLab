@@ -1,0 +1,125 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0 ;
+    padding: 0;
+}
+
+body{
+    background-color: #081544;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    object-fit: cover;
+
+}
+/*HOME BANNER START*/
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header .header-align{
+    align-items: flex-end;
+}
+
+header .header-left{
+    font-size: 38px;
+    letter-spacing: 4px;
+}
+
+header .header-right ul{
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    list-style-type: none;
+    margin: 20px;
+    padding: 30px;
+
+}
+ a{
+    color:whitesmoke;
+    font-size: 20px;
+    text-decoration: unset;  /* Yazı altındaki çizgiyi kaldırır*/
+}
+header .header-right ul button{
+
+    background-color: transparent;
+    border-radius: 40px ;
+    border-color: red;
+    color: red;
+    width: 130px;
+    height: 50px;
+}
+
+
+/*HOME BANNER END*/
+
+/*FORM START*/
+
+.login-form{
+    
+    background:#02235e;
+    min-width: 500px;
+    min-height: 240px;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10%;
+
+}
+h2{
+    text-transform: uppercase;
+}
+
+.tbox{
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    outline:none;
+    background: none;
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 5px;
+}
+.tpbox{
+    margin-top:15px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    outline:none;
+    background: none;
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 5px;
+}
+
+.btn{
+    margin-top: 30px;
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #707c91;
+    outline:none;
+    border-radius: 10%;
+    cursor:pointer;
+    transition: 0.5s;
+
+}
+.btn:hover{
+    background-color: transparent;
+    border:1px solid whitesmoke;
+    color:whitesmoke;
+}
+
+
+/*FORM END*/
+
+/*GİRİŞ START*/
