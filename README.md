@@ -11,11 +11,6 @@
   </p>
 </p>
 
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
 <a href="https://s10.gifyu.com/images/Animation387bbf064343cb3fe.gif">
     <img src="https://s10.gifyu.com/images/Animation387bbf064343cb3fe.gif" alt="Logo"  >
 </a>
