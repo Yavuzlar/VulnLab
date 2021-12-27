@@ -55,7 +55,7 @@ if (isset($_GET['img'])) {
         <div class="main">
             <div class="upper justify-content-center" style="text-align: center;margin: 2vh 0vh 6vh 0vh;">
                 <h1>
-                    Araba Galerisine Hoş Geldiniz
+                    <?php echo $strings['header']; ?>
                 </h1>
                 <form action="" method="POST" class="row justify-content-center" style="margin: 2vh 0vh 6vh 0vh;">
                     <div class="col-md-10 button-con row justify-content-evenly ">
@@ -78,8 +78,8 @@ if (isset($_GET['img'])) {
                             ?>
                         </div>
                         <div class="btn-group w-75 mt-3">
-                            <button class="btn btn-primary" type="submit" name="prev">Geri</button>
-                            <button class="btn btn-warning" type="submit" name="next">İleri</button>
+                            <button class="btn btn-primary" type="submit" name="prev"><?php echo $strings['back']; ?></button>
+                            <button class="btn btn-warning" type="submit" name="next"><?php echo $strings['next']; ?></button>
                         </div>
                     </div>
                 </form>

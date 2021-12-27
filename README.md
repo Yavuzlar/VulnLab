@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://siberyavuzlar.com">
-    <img src="https://siberyavuzlar.com/assets/img/logo/yavuzlar.png" alt="Logo" width="180" height="180">
+    <img src="https://i.ibb.co/nDLHW7m/logomodern.png" alt="Logo" width="180" height="180">
   </a>
 
   <h3 align="center">VulnLab</h3> 
@@ -22,7 +22,7 @@
 * Cross Site Scripting (XSS)
 * Command Injection
 * Insecure Direct Object References (IDOR)
-* Cross Site Request Fxxorgery (CSRF)
+* Cross Site Request Forgery (CSRF)
 * XML External Entity (XXE)
 * Insecure Deserialization
 * File Upload
@@ -62,16 +62,18 @@
 
 <!-- SPONSOR -->
 
-## Sponsor
-
+## Supporters
+<a href="https://www.bakka.gov.tr/" style="margin-right:50px;">
+    <img src="https://i.ibb.co/YXYdfQx/bakkalogo.png" alt="Logo" width="200" >
+</a>
 <a href="https://cyrops.com/">
-    <img src="https://cyrops.com/img/logo.png" alt="Logo" width="200" >
+    <img src="https://i.ibb.co/MV9HbNZ/Ba-l-ks-z-2.png" alt="Logo" width="200" >
 </a>
 
 <!-- CONTACT -->
 ## Contact
 
-[Web Site](https://siberyavuzlar.com/) </br>
+[Website](https://siberyavuzlar.com/) </br>
 [Linkedln](https://www.linkedin.com/company/siberyavuzlar) <br>
 [Twitter](https://twitter.com/siberyavuzlar) </br>
 [Instagram](https://www.instagram.com/siberyavuzlar/)
