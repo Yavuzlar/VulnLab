@@ -22,7 +22,7 @@
 * Cross Site Scripting (XSS)
 * Command Injection
 * Insecure Direct Object References (IDOR)
-* Cross Site Request Fxxorgery (CSRF)
+* Cross Site Request Forgery (CSRF)
 * XML External Entity (XXE)
 * Insecure Deserialization
 * File Upload
