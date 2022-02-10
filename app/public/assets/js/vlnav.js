@@ -29,6 +29,11 @@ const translate = {
         "tr": "Geri D&ouml;n",
         "en": "Go Back",
         "fr": "Retourner"
+    },
+    "sourceC": {
+        "tr": "Kaynak Kod",
+        "en": "Source Code",
+        "fr": "Code Source"
     }
 }
 
@@ -159,8 +164,33 @@ btnCategoryEl.onclick = () => {
     window.location.href = `/vuln/${CategoryID}`;
 }
 
-headerRight.appendChild(btnCategoryEl);
+var btnSourceCodeEl= document.createElement("div")
+btnSourceCodeEl.style.cssText=btnStyle;
+btnSourceCodeEl.style.marginRight = "15px";
+btnSourceCodeEl.innerHTML = `
+<img style="width: 15px; margin-right:5px;" src="/public/assets/img/source.png" > ${translate["sourceC"][selectedLanguage.code]}
+`
+btnSourceCodeEl.onmouseover = () => {
+    btnSourceCodeEl.style.backgroundColor = "#131b3a";
+}
+btnSourceCodeEl.onmouseleave = () => {
+    btnSourceCodeEl.style.backgroundColor = "#162044";
+}
 
+btnSourceCodeEl.onclick = () =>{
+    let url = "/source-code.php?page=."+window.location.pathname
+    if (url.charAt(url.length -1) === "/"){
+        url = url+ "index.php";
+    }
+    let left = (screen.width - 750) / 2;
+    let top = (screen.height - 750) / 4;
+    let pop = window.open(url,'popUpWindow','height=750,width=750,left='+left+',top='+top+',resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,directories=no, status=yes');
+    pop.moveTo(left,top);
+    pop.focus();
+}
+
+headerRight.appendChild(btnCategoryEl);
+headerRight.appendChild(btnSourceCodeEl)
 
 var langEl = document.createElement('div');
 headerRight.appendChild(langEl);
