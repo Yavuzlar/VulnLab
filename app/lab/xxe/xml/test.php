@@ -8,6 +8,4 @@
 
 echo $dom->textContent;
 
-print "Tebrikler soru çözüldü";
-
 ?>
