@@ -1,6 +1,12 @@
 <?php
 require("../../../lang/lang.php");
 $strings = tr();
+function encodeB($char){
+    $replace = array(urlencode("<"),urlencode(">"));
+    $char=str_replace("<",urlencode("<"), $char);
+    $encoded=str_replace(">",urlencode(">"), $char);
+    return $encoded;
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,6 +41,7 @@ $strings = tr();
         <?php
         if (isset($_GET['name'])) {
             $ticketname = $_GET['name'];
+            $ticketname = encodeB($ticketname);
             echo '<div class="ticket alert alert-primary" style="max-width: 50vw;"><h6><a href="ticket.php?name=' . $ticketname . '"> ' . $strings['gate'] . ' </a></h6></div>';
         }
 

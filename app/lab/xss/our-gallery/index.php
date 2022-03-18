@@ -1,6 +1,14 @@
 <?php
 require("../../../lang/lang.php");
 $strings = tr();
+function encodeB($char){
+
+    $replace = array(urlencode("<"),urlencode(">"));
+    $char=str_replace("<",urlencode("<"), $char);
+    $encoded=str_replace(">",urlencode(">"), $char);
+    return $encoded;
+
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -33,7 +41,7 @@ $strings = tr();
             <div class="bottom justify-content-center" style="text-align: center;">
                 <?php
                 if (isset($_GET['img'])) {
-                    echo '<img class="shadow-lg bg-body rounded" style="width:500px;padding : 0; margin-bottom: 0;" src="' . $_GET['img'] . '.jpg"/>';
+                    echo '<img class="shadow-lg bg-body rounded" style="width:500px;padding : 0; margin-bottom: 0;" src="' . encodeB($_GET['img']) . '.jpg"/>';
                 }
                 ?>
             </div>

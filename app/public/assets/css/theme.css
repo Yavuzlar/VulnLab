@@ -18259,5 +18259,100 @@ label {
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/
+/*-----------------------------------------------
+|   Accordion start
+-----------------------------------------------*/
+.accordion-res {
+  width: 50rem;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+  background-color: #162044;
+  
+/*   box-shadow: 0 0 5rem lightgrey; */
+}
+
+
+.accordion__heading {
+  margin-bottom: 1rem;
+  padding: 0 1.4rem;
+}
+
+.accordion__item:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+
+.accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.2rem 0.9rem;
+  background-color: #162044;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.1s;
+  border-radius: 1rem;
+  margin-top: 3px;
+}
+.accordion__btn:hover {
+  color: var(--color-purple);
+  background-color: #162044;
+}
+
+.accordion__item--active .accordion__btn {
+  color: var(--color-purple);
+  border-bottom: 2px solid var(--color-purple);
+  background-color: #162044;
+}
+
+.fa-lightbulb {
+  padding-right: 1rem;
+}
+.accordion__icon {
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  opacity: 0.9;
+}
+.accordion__item--active .accordion__icon {
+  transform: rotate(135deg);
+}
+
+.accordion__content {
+  font-weight: 300;
+  margin-top: 5px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  color: #7E8BB6;
+  transform: translateX(16px);
+  transition: max-height 0.5s ease, opacity 0.5s, transform 0.5s;
+}
+.accordion__content p {
+  padding: 1rem 1.8rem;
+}
+
+.accordion__item--active .accordion__content {
+  opacity: 1;
+  transform: translateX(0px);
+  max-height: 100vh;
+}
+.accordion__content li {
+  padding: 0.3rem;
+}
+.accordion__content li a , a:hover , a:link {
+  color: #7E8BB6;
+}
+.accordion__content li a:hover {
+  color: whitesmoke;
+}
+.accordion__content ul {
+  margin-top: 0.8rem;
+}
+
 
 /*# sourceMappingURL=theme.css.map */

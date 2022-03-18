@@ -44,6 +44,9 @@ RUN a2enmod rewrite
 RUN chmod +x /usr/sbin/run.sh
 RUN chown -R www-data:www-data /var/www/html
 RUN apt-get install iputils-ping -y
+RUN apt-get install wget -y
+RUN apt install net-tools -y
+
 
 RUN dos2unix /usr/sbin/run.sh
 

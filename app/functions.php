@@ -25,6 +25,17 @@ function getLabs($vulnID){
         }
       }
 }
+function getRes($vulnID){
+    $Raw_Json = file_get_contents("./resources.json");
+
+    $data = json_decode($Raw_Json,true);
+
+    foreach($data as $key=> $val){
+        if ($val['id']==$vulnID){
+            return $val['res'];
+        }
+      }
+}
 
 
 ?>

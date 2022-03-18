@@ -133,6 +133,22 @@
                 },
                 "url": "/lab/xss/news/",
                 "vulnID": 1
+            },{
+                "id": 8,
+                "title": {
+                    "en": "File Upload",
+                    "tr": "Dosya Yükleme",
+                    "fr": "téléchargement de fichiers",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find a way to trigger XSS via uploaded file.",
+                    "tr": "Yüklediğin dosya üzerinden XSS zafiyetini tetikleyin.",
+                    "fr": "Trouvez un moyen de déclencher XSS via un fichier téléchargé.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/image-upload/",
+                "vulnID": 1
             }
         ]
     },
