@@ -37,7 +37,7 @@ if ($result = $query->fetch(PDO::FETCH_ASSOC)) {
 } else {
     $name = "";
     $job = "";
-    $about = "Kullanıcı bulunamadı!";
+    $about = $strings['user_notfound'];
     $email = "";
     $phone = "";
     $location = "";
