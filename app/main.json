@@ -355,6 +355,23 @@
                 },
                 "url": "/lab/idor/address-entry/",
                 "vulnID": 3
+            },
+            {
+                "id": 6,
+                "title": {
+                    "en": "About",
+                    "tr": "Hakkında",
+                    "fr": "À propos",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Change other users' profile information.",
+                    "tr": "Başka kullanıcıların profil bilgilerini değiştirin.",
+                    "fr": "Modifier les informations de profil des autres utilisateurs.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/about/",
+                "vulnID": 3
             }
         ]
     },
