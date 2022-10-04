@@ -89,13 +89,5 @@
             "3": "https://www.thesslstore.com/blog/everything-you-need-to-know-about-broken-authentication/",
             "4": "https://geekflare.com/brute-force-attack-tools/"
         }
-    },
-    {
-        "id": "11",
-        "lab": "server-side-template-injection",
-        "res": {
-            "1": "https://portswigger.net/web-security/server-side-template-injection/",
-            "2": "https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection"
-        }
     }
 ]
