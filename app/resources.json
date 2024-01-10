@@ -89,5 +89,12 @@
             "3": "https://www.thesslstore.com/blog/everything-you-need-to-know-about-broken-authentication/",
             "4": "https://geekflare.com/brute-force-attack-tools/"
         }
+    },
+    {
+        "id": "11",
+        "lab": "Race condition",
+        "res": {
+            "1": "https://portswigger.net/web-security/race-conditions"
+        }
     }
 ]
