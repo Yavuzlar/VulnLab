@@ -905,44 +905,9 @@
                     "fr": "Exploiter la vulnérabilité en contournant le filtre",
                     "ar": ""
                 },
-                "url": "/lab/ssti/ssti1/",
+                "url": "/lab/ssti/SSTI-Blacklist/",
                 "vulnID": 11
             }
         ]
-    },
-    {
-        "id": 12,
-        "title": {
-            "en": "Race Condition",
-            "tr": "Race Condition",
-            "fr": "Race Condition",
-            "ar": ""
-        },
-        "description": {
-            "en": "Race condition refers to a situation that can prevent a program from working correctly and cause security vulnerabilities. This occurs when two or more processes attempt to access the same resources at the same time, where this access occurs in a sequential or uncontrolled manner, which may result in unexpected errors or vulnerabilities.",
-            "tr": "Race condition, bir programın doğru çalışmasını engelleyebilecek ve güvenlik zafiyetlerine yol açabilen bir durumu ifade eder. Bu durum, iki veya daha fazla işlemin aynı kaynaklara aynı anda erişmeye çalıştığı, bu erişimin sıralı veya kontrolsüz bir şekilde gerçekleştiği durumlarda ortaya çıkar, ve bu durumda beklenmeyen hatalar veya güvenlik açıkları meydana gelebilir.",
-            "fr": "La condition de concurrence fait référence à une situation qui peut empêcher un programme de fonctionner correctement et entraîner des failles de sécurité. Cela se produit lorsque deux processus ou plus tentent d'accéder aux mêmes ressources en même temps, cet accès se produisant de manière séquentielle ou incontrôlée, ce qui peut entraîner des erreurs ou des vulnérabilités inattendues.",
-            "ar": ""
-        },
-        "imgURL": "public/assets/img/vulns/race.png",
-        "labs": [
-            {
-                "id": 1,
-                "title": {
-                    "en": "Race Condition",
-                    "tr": "Race Condition",
-                    "fr": "Race Condition",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "Register multiple people with one email address.",
-                    "tr": " Bir mail adresi ile birden fazla kişiyi kayıt et..",
-                    "fr": "Enregistrez plusieurs personnes avec une seule adresse e-mail",
-                    "ar": ""
-                },
-                "url": "/lab/Race-condition/race-condition1/",
-                "vulnID": 12
-            }
-        ]
-    }
+    }    
 ]
