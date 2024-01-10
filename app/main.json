@@ -874,5 +874,40 @@
                 "vulnID": 10
             }
         ]
+    },
+    {
+        "id": 11,
+        "title": {
+            "en": "Server Side Template Injection(SSTI)",
+            "tr": "Sunucu Tarafı Şablon Enjeksiyonu",
+            "fr": "Injection de modèle côté serveur",
+            "ar": ""
+        },
+        "description": {
+            "en": "It is a security vulnerability triggered by adding unexpected input to the templates used to present dynamic data in web applications.",
+            "tr": "Web uygulamalarında dinamik verileri sunmak için kullanılan şablonlara beklenilenin dışında girdi eklenerek tetiklenen bir güvenlik zafiyetidir.",
+            "fr": "Il s'agit d'une vulnérabilité de sécurité déclenchée par l'ajout d'entrées inattendues aux modèles utilisés pour présenter des données dynamiques dans les applications Web.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/ssti.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Math Operation",
+                    "tr": "Matematik İşlemi",
+                    "fr": "Opération mathématique",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Prove that you are a hacker while talking about yourself.",
+                    "tr": "Kendinden bahsederken bir hacker olduğunu kanıtla.",
+                    "fr": "Prouvez que vous êtes un hacker en parlant de vous.",
+                    "ar": ""
+                },
+                "url": "/lab/ssti/math-operation/",
+                "vulnID": 11
+            }
+        ]
     }
 ]
