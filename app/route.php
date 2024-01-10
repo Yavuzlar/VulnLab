@@ -17,7 +17,7 @@ class Route
        if (in_array($_SERVER['REQUEST_METHOD'],$method)) {
             $patterns = [
                 '{url}'=> '([0-9a-zA-Z]+)',
-                '{id}' => '([0-9]+)'
+                '{id}' => '([0-9][0-9])'
             ];
 
             $url = str_replace(array_keys($patterns),array_values($patterns),$url);

@@ -89,5 +89,13 @@
             "3": "https://www.thesslstore.com/blog/everything-you-need-to-know-about-broken-authentication/",
             "4": "https://geekflare.com/brute-force-attack-tools/"
         }
+    },
+    {
+        "id": "11",
+        "lab": "ssti,",
+        "res": {
+            "1": "https://www.youtube.com/watch?v=w-GbdWzss0g/",
+            "2": "https://www.cobalt.io/blog/a-pentesters-guide-to-server-side-template-injection-ssti/"
+        }
     }
 ]
