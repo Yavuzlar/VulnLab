@@ -12,10 +12,7 @@ $strings = tr();
 </head>
 <body>
 
-<form action="" method="POST">
-<a href="index.php" class="btn btn-secondary"><?php echo $strings["back"]?></a>
-<button class="btn btn-danger" type="submit" name="silButton"><?php echo $strings["del"]?></button>
-</form>
+
 
 <?php
 
@@ -76,7 +73,10 @@ try {
 $db = null;
 
 ?>
-
+<form action="" method="POST">
+<a href="index.php" class="btn btn-secondary"><?php echo $strings["back"]?></a>
+<button class="btn btn-danger" type="submit" name="silButton"><?php echo $strings["del"]?></button>
+</form>
 <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="12" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 </html>

@@ -879,14 +879,14 @@
         "id": 11,
         "title": {
             "en": "Race Condition",
-            "tr": "Race Condition",
-            "fr": "Race Condition",
+            "tr": "Yarış Durumu",
+            "fr": "Situation de compétition",
             "ar": ""
         },
         "description": {
             "en": "Race condition refers to a situation that can prevent a program from working correctly and cause security vulnerabilities. This occurs when two or more processes attempt to access the same resources at the same time, where this access occurs in a sequential or uncontrolled manner, which may result in unexpected errors or vulnerabilities.",
-            "tr": "Race condition, bir programın doğru çalışmasını engelleyebilecek ve güvenlik zafiyetlerine yol açabilen bir durumu ifade eder. Bu durum, iki veya daha fazla işlemin aynı kaynaklara aynı anda erişmeye çalıştığı, bu erişimin sıralı veya kontrolsüz bir şekilde gerçekleştiği durumlarda ortaya çıkar, ve bu durumda beklenmeyen hatalar veya güvenlik açıkları meydana gelebilir.",
-            "fr": "La condition de concurrence fait référence à une situation qui peut empêcher un programme de fonctionner correctement et entraîner des failles de sécurité. Cela se produit lorsque deux processus ou plus tentent d'accéder aux mêmes ressources en même temps, cet accès se produisant de manière séquentielle ou incontrôlée, ce qui peut entraîner des erreurs ou des vulnérabilités inattendues.",
+            "tr": "Yarış Durumu, bir programın doğru çalışmasını engelleyebilecek ve güvenlik zafiyetlerine yol açabilen bir durumu ifade eder. Bu durum, iki veya daha fazla işlemin aynı kaynaklara aynı anda erişmeye çalıştığı, bu erişimin sıralı veya kontrolsüz bir şekilde gerçekleştiği durumlarda ortaya çıkar, ve bu durumda beklenmeyen hatalar veya güvenlik açıkları meydana gelebilir.",
+            "fr": "Situation de compétition fait référence à une situation qui peut empêcher un programme de fonctionner correctement et provoquer des failles de sécurité. Cela se produit lorsque deux processus ou plus tentent d'accéder aux mêmes ressources en même temps, et que cet accès se produit de manière séquentielle ou incontrôlée, ce qui peut entraîner des erreurs inattendues ou des vulnérabilités.",
             "ar": ""
         },
         "imgURL": "public/assets/img/vulns/race.png",
@@ -894,18 +894,18 @@
             {
                 "id": 1,
                 "title": {
-                    "en": "Race Condition",
-                    "tr": "Race Condition",
-                    "fr": "Race Condition",
+                    "en": "Race Condition in the registration form",
+                    "tr": "Kayıt formunda oluşan Yarış Koşulu",
+                    "fr": "Condition de course dans le formulaire d'inscription",
                     "ar": ""
                 },
                 "description": {
-                    "en": "Register multiple people with one email address.",
-                    "tr": " Bir mail adresi ile birden fazla kişiyi kayıt et..",
-                    "fr": "Enregistrez plusieurs personnes avec une seule adresse e-mail",
+                    "en": "Security measures say that an account can be opened with an email :)",
+                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor:).",
+                    "fr": "Les mesures de sécurité disent qu'un compte peut être ouvert avec un e-mail :)",
                     "ar": ""
                 },
-                "url": "/lab/Race-condition/race-condition1/",
+                "url": "/lab/race-condition/race-condition1/",
                 "vulnID": 11
             }
         ]
