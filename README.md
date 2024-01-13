@@ -28,6 +28,7 @@
 * File Upload
 * File Inclusion
 * Broken Authentication
+* Race Condition
 
 <!-- Installation -->
 ## Installation
