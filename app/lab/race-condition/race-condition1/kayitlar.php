@@ -19,7 +19,7 @@ $strings = tr();
 include( "baglanti.php" );
 
 session_start();
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // Eğer email set edilmişse $email'e ata, aksi halde boş bir string ata
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // If email is set, assign it to $email, otherwise assign it an empty string
 
 if (isset($_POST['silButton'])) {
 
@@ -28,7 +28,7 @@ if (isset($_POST['silButton'])) {
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     
     if ($stmt->execute()) {
-        echo $strings["reg_del"].'<br>';    //Kayıtlar başarıyla silindi.
+        echo $strings["reg_del"].'<br>';    //Registration deleted successfully.
     } else {
         echo "Error";
     }
@@ -64,7 +64,7 @@ try {
     
         echo "</table>";
     } else {
-        echo $strings['no_registration'];    //Henüz Kayıt bulunmamaktadır.
+        echo $strings['no_registration'];    //No registration has been found yet..
     }
 } catch (PDOException $e) {
     echo "Sorgu hatası: " . $e->getMessage();

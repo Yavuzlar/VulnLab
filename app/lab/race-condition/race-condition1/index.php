@@ -12,21 +12,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tel = htmlspecialchars($_POST['tel']);
 
 
-        // Kontrol et: Aynı emaile sahip kayıt var mı?
+        //Check: Is there a registration with the same email??
         $kontrolSql = "SELECT * FROM kayit WHERE email = '$email'";
         $kontrolSonuc = $db->query($kontrolSql);
         $results = $kontrolSonuc->fetchAll(PDO::FETCH_ASSOC);
         if (count($results) > 0) {
-            // Aynı emaile sahip kayıt bulundu, uyarı ver.
-            echo $strings['warning'];              //Kayıt işlemi başarısız: Epostaya kayıtlı hesap zaten mevcut!
+            // A registration with the same email has been found, issue a warning..
+            echo $strings['warning'];              //Registration failed: An account with the registered email already exists.!
         } else {
-            // Aynı emaile sahip kayıt yok, ekle.
+            // No registration with the same email exists, add it.
             $ekleSql = "INSERT INTO kayit (ad, soyad, email, tel) VALUES ('$ad', '$soyad', '$email', '$tel')";
 
             if ($db->exec($ekleSql)) {
-                echo $strings['successful'];       //Kayıt Tamamlandı!
+                echo $strings['successful'];       //registration completed!
             } else {
-                echo $strings['unsuccessful'];     //Kayıt İşlemi başarısız.
+                echo $strings['unsuccessful'];     //registration failed.
             }
         }
 
@@ -98,7 +98,7 @@ if (isset($_POST['email'])) {
 </form>
 
 
-        <!-- Boşluk eklemek için araya bir div ekleyebilirsiniz -->
+      
         <div style="margin-top: 10px;"></div>
 
         <a href="kayitlar.php" class="btn btn-danger btn-primary-sm"><?php echo $strings['registers']; ?></a>
