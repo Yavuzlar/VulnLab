@@ -96,5 +96,12 @@
         "res": {
             "1": "https://portswigger.net/web-security/race-conditions"
         }
+    },
+    {
+        "id": "12",
+        "lab": "ssti",
+        "res": {
+            "1": "https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection"
+        }
     }
 ]

@@ -909,5 +909,40 @@
                 "vulnID": 11
             }
         ]
+    },
+    {
+        "id": 12,
+        "title": {
+            "en": "Server Side Template Injection (SSTI)",
+            "tr": "Sunucu Tarafı Şablon Enjeksiyonu (SSTI)",
+            "fr": "Injection de modèle côté serveur (SSTI)",
+            "ar": ""
+        },
+        "description": {
+            "en": "Server-Side Template Injection (SSTI) is one of the vulnerabilities in web applications. This vulnerability could allow the malware to infect the server-side template engine and corrupt unwanted code by filling in the malware's lifetime throughout user input. These types of attacks manipulate the code inside the application, allowing sensitive information to be leaked or unwanted operations to occur on the system.",
+            "tr": "Server-Side Template Injection (SSTI), web uygulamalarındaki güvenlik açıklarından biridir. Bu açık, saldırganın kötü niyetli şablon ifadelerini kullanıcı girişleri aracılığıyla enjekte ederek, sunucu tarafında şablon motorunu etkilemesine ve istenmeyen kodun yürütülmesine neden olabilir. Bu tür saldırılar, uygulama içindeki kodu manipüle ederek hassas bilgilerin sızdırılmasına veya sistem üzerinde istenmeyen eylemlerin gerçekleştirilmesine olanak tanır.",
+            "fr": "L'injection de modèles côté serveur (SSTI) est l'une des vulnérabilités des applications Web. Cette vulnérabilité pourrait permettre à un attaquant d'injecter des expressions de modèle malveillantes via la saisie de l'utilisateur, affectant le moteur de modèle côté serveur et provoquant l'exécution de code indésirable. Ces types d'attaques manipulent le code au sein de l'application, permettant la fuite d'informations sensibles ou l'exécution d'actions indésirables sur le système.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/ssti.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "SSTI",
+                    "tr": "SSTI",
+                    "fr": "SSTI",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Exploit vulnerability by bypassing filter.",
+                    "tr": "Filtreyi atlatarak zafiyeti sömür.",
+                    "fr": "Exploiter la vulnérabilité en contournant le filtre",
+                    "ar": ""
+                },
+                "url": "/lab/ssti/SSTI-Blacklist/",
+                "vulnID": 12
+            }
+        ]
     }
 ]
