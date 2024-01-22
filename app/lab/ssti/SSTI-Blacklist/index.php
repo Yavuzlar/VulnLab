@@ -11,11 +11,11 @@ $strings = tr();
     <title>ssti</title>
 </head>
 <body>
-<div style="text-align: center; padding: 20px;">
+<div style="text-align: center; padding-top: 15%;">
 
 <form action="" method="GET">
-    <input placeholder="<?php echo $strings['searchonpage'] ?>" type="text" name="ad">
-    <button type="submit"><?php echo $strings['search'] ?></button>
+    <input style="width: 35%; display:inline-block; margin: 5px" class="form-control" placeholder="<?php echo $strings['searchonpage'] ?>" type="text" name="search"><br>
+    <button style="width: 90px; margin: 1%;" class="btn btn-info" type="submit"><?php echo $strings['search'] ?></button>
 </form>
 
 <?php
@@ -26,22 +26,22 @@ ini_set('display_errors', 0);
 
 
 
-if (isset($_GET['ad'])) {
-    $name = $_GET['ad'];
+if (isset($_GET['search'])) {
+    $search = $_GET['search'];
 
     $blacklist = array('{{', '}}', '{%', '%}');
-    $name = str_replace($blacklist, '', $name);
+    $search = str_replace($blacklist, '', $search);
 
     try {
         require 'vendor/autoload.php';
         Twig_Autoloader::register();
         $loader = new Twig_Loader_String();
         $twig = new Twig_Environment($loader);
-        $result = $twig->render(strip_tags($name));
+        $result = $twig->render(strip_tags($search));
 
         echo $result.' '.$strings['not_found'];
     } catch (Exception $e) {
-        echo ('ERROR:' . $e->getMessage());
+        echo('ERROR:' . $e->getMessage());
     }
 }
 
