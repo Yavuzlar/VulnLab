@@ -929,9 +929,9 @@
             {
                 "id": 1,
                 "title": {
-                    "en": "SSTI",
-                    "tr": "SSTI",
-                    "fr": "SSTI",
+                    "en": "SSTI-Blacklist",
+                    "tr": "SSTI-Blacklist",
+                    "fr": "SSTI-Blacklist",
                     "ar": ""
                 },
                 "description": {
