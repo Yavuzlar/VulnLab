@@ -29,6 +29,7 @@
 * File Inclusion
 * Broken Authentication
 * Race Condition
+* Server Side Template Injection (SSTI)
 
 <!-- Installation -->
 ## Installation
