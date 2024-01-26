@@ -33,7 +33,7 @@ if (isset($_GET['search'])) {
     $search = str_replace($blacklist, '', $search);
 
     try {
-        require 'vendor/autoload.php';
+        require '../public/vendor/autoload.php';
         Twig_Autoloader::register();
         $loader = new Twig_Loader_String();
         $twig = new Twig_Environment($loader);
