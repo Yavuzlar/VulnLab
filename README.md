@@ -15,7 +15,7 @@
     <img src="https://s10.gifyu.com/images/Animation387bbf064343cb3fe.gif" alt="Logo"  >
 </a>
 
-<!-- Vulnerabilities -->
+<!-- Vulnerabilities List -->
 ## Vulnerabilities
 
 * SQL Injection
