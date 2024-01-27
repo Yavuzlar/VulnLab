@@ -8,7 +8,7 @@ $strings = tr();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <title>ssti</title>
+    <title>ssti lab</title>
 </head>
 <body>
 <div style="text-align: center; padding-top: 15%;">
