@@ -929,6 +929,23 @@
             {
                 "id": 1,
                 "title": {
+                    "en": "SSTI-Basic",
+                    "tr": "SSTI-Basic",
+                    "fr": "SSTI-Basic",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Prove that you are a hacker when you introduce yourself.",
+                    "tr": "Kendinizi tanıtırken bir hacker olduğunuzu kanıtlayın.",
+                    "fr": "Prouvez que vous êtes un hacker lorsque vous vous présentez.",
+                    "ar": ""
+                },
+                "url": "/lab/ssti/SSTI-Basic/",
+                "vulnID": 12
+            },
+            {
+                "id": 2,
+                "title": {
                     "en": "SSTI-Blacklist",
                     "tr": "SSTI-Blacklist",
                     "fr": "SSTI-Blacklist",
@@ -943,6 +960,7 @@
                 "url": "/lab/ssti/SSTI-Blacklist/",
                 "vulnID": 12
             }
+            
         ]
     }
 ]
