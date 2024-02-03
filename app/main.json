@@ -907,6 +907,23 @@
                 },
                 "url": "/lab/race-condition/race-condition1/",
                 "vulnID": 11
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Race Condition in the validation form",
+                    "tr": "Doğrulama formunda yarış koşulu",
+                    "fr": "Race Condition dans le formulaire de validation",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "The creators of the site are very forgetful and needed a notebook :).",
+                    "tr": "Sitenin yaratıcıları çok unutkan ve bir not defterine ihtiyaçları vardı :).",
+                    "fr": "Les créateurs du site sont très distraits et avaient besoin d'un carnet :).",
+                    "ar": ""
+                },
+                "url": "/lab/race-condition/race-validation/",
+                "vulnID": 11
             }
         ]
     },
@@ -929,23 +946,6 @@
             {
                 "id": 1,
                 "title": {
-                    "en": "SSTI-Basic",
-                    "tr": "SSTI-Basic",
-                    "fr": "SSTI-Basic",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "Prove that you are a hacker when you introduce yourself.",
-                    "tr": "Kendinizi tanıtırken bir hacker olduğunuzu kanıtlayın.",
-                    "fr": "Prouvez que vous êtes un hacker lorsque vous vous présentez.",
-                    "ar": ""
-                },
-                "url": "/lab/ssti/SSTI-Basic/",
-                "vulnID": 12
-            },
-            {
-                "id": 2,
-                "title": {
                     "en": "SSTI-Blacklist",
                     "tr": "SSTI-Blacklist",
                     "fr": "SSTI-Blacklist",
@@ -960,7 +960,6 @@
                 "url": "/lab/ssti/SSTI-Blacklist/",
                 "vulnID": 12
             }
-            
         ]
     }
 ]
