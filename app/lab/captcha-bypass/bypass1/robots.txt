@@ -1,0 +1,10 @@
+ROBOTLARI KULLANMAKTAN SAKIN KORKMA!
+
+inceleme yapmak icin her zaman mause kullanmak zorunda degilsin:)
+<script>
+    
+    
+    var captchaValue = document.getElementById('yusuf').innerText; 
+        document.getElementById("captcha").value = captchaValue; 
+   
+</script>
