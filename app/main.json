@@ -872,6 +872,23 @@
                 },
                 "url": "/lab/broken-authentication/no-redirect/",
                 "vulnID": 10
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Two-Factor Authentication",
+                    "tr": "İki Faktörlü Kimlik Doğrulama",
+                    "fr": "Authentification à deux facteurs",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "A good hacker doesn't always need to see.",
+                    "tr": "İyi bir hacker'ın her zaman görmesi gerekmez.",
+                    "fr": "Un bon hacker n'a pas toujours besoin de voir.",
+                    "ar": ""
+                },
+                "url": "/lab/broken-authentication/2FA/",
+                "vulnID": 10
             }
         ]
     },
