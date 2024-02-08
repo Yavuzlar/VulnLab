@@ -5,7 +5,7 @@ session_start();
 if ($_SESSION['dogrulama'] != true)
  {
    header("location:/lab/captcha-bypass/bypass1/index.php");
-    
+    exit();
 }
 
 ?>
