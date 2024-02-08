@@ -62,11 +62,17 @@ $_SESSION['captcha'] = $captcha;
     function sayfaYenile() {
       location.reload(); 
     }
-
+    setInterval(sayfaYenile, 3000); // 3000 milisaniye = 3 saniye
     
-    setInterval(sayfaYenile, 2000); // 2000 milisaniye = 2 saniye
+    
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
     });
+    
+    document.onselectstart = function() {
+        return false;
+    }
+
+
   </script>
   
