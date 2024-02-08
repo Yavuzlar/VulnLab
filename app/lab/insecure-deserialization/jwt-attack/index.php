@@ -1,7 +1,7 @@
 <?php
     
     require "function.php";
-    // require("../../lang/lang.php");
+    require("../../../lang/lang.php");
     // setcookie("jwt","",time()-1);
     if(isset($_COOKIE["jwt"])){
         try{
