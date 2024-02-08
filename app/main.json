@@ -901,7 +901,7 @@
                 },
                 "description": {
                     "en": "Security measures say that an account can be opened with an email :)",
-                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor:).",
+                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor :)",
                     "fr": "Les mesures de sécurité disent qu'un compte peut être ouvert avec un e-mail :)",
                     "ar": ""
                 },
@@ -917,9 +917,9 @@
                     "ar": ""
                 },
                 "description": {
-                    "en": "The creators of the site are very forgetful and needed a notebook :).",
-                    "tr": "Sitenin yaratıcıları çok unutkan ve bir not defterine ihtiyaçları vardı :).",
-                    "fr": "Les créateurs du site sont très distraits et avaient besoin d'un carnet :).",
+                    "en": "The creators of the site are very forgetful and needed a notebook :)",
+                    "tr": "Sitenin yaratıcıları çok unutkan ve bir not defterine ihtiyaçları vardı :)",
+                    "fr": "Les créateurs du site sont très distraits et avaient besoin d'un carnet de notes :)",
                     "ar": ""
                 },
                 "url": "/lab/race-condition/race-validation/",
