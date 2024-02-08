@@ -89,7 +89,7 @@
         </div>
     <?php endif?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
+    <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="9" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 
 </html>
