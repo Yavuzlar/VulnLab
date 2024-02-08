@@ -38,12 +38,12 @@ if (isset($_POST['apply_discount'])) {
             sleep(1);
             $_SESSION['discount_applied'] = true; // İndirim uygulandı işareti
             $_SESSION['discount_amount'] = 50; // Uygulanan indirim miktarını sakla
-            echo "<script>alert("<?php echo $strings['successful']; ?>")</script>";
+            echo "<script>alert(".  $strings['successful'] . ")</script>";
         } else {
-            echo "<script>alert("<?php echo $strings['warning']; ?>")</script>";
+            echo "<script>alert(" . $strings['warning'] .")</script>";
         }
     } else {
-        echo "<scriptalert("<?php echo $strings['unsuccessful']; ?>")</script>";
+        echo "<scriptalert(". $strings['unsuccessful'] .")</script>";
     }
 }
 
@@ -168,7 +168,8 @@ if (isset($_POST['clear_cart'])) {
         <h3><?php echo $strings['product1']; ?></h3>
             <form method="post">
                 <input type="hidden" name="product" value="100">
-                <button type="submit" name="add_to_cart" value="<?php echo $strings['add']; ?>"></button>
+                <button type="submit" name="add_to_cart" value="<?php echo $strings['add']; ?>"><?php echo $strings['add']; ?></button>
+
             </form>
         </div>
 
@@ -176,7 +177,8 @@ if (isset($_POST['clear_cart'])) {
         <h3><?php echo $strings['product2']; ?></h3>
             <form method="post">
                 <input type="hidden" name="product" value="150">
-                <button type="submit" name="add_to_cart" value="<?php echo $strings['add']; ?>"></button>
+                <button type="submit" name="add_to_cart" value="<?php echo $strings['add']; ?>"><?php echo $strings['add']; ?></button>
+
             </form>
         </div>
 
@@ -184,23 +186,26 @@ if (isset($_POST['clear_cart'])) {
         <h3><?php echo $strings['product3']; ?></h3>
             <form method="post">
                 <input type="hidden" name="product" value="200">
-                <button type="submit" name="add_to_cart" value="<?php echo $strings['add']; ?>"></button>
+                <button type="submit" name="add_to_cart" value="<?php echo $strings['add']; ?>"><?php echo $strings['add']; ?></button>
+
             </form>
         </div>
 
         <div>
             <form method="post">
-                <button type="submit" name="clear_cart" value="<?php echo $strings['clr']; ?>"></button>
+            <button type="submit" name="clear_cart" value="<?php echo $strings['clr']; ?>"><?php echo $strings['clr']; ?></button>
+
             </form>
         </div>
 
         <!-- İndirim Kodu -->
         <div class="discount-code">
             <form method="post">
-                <label for="coupon_code" <?php echo $strings['code']; ?>>:</label>
+                <label for="coupon_code" ><?php echo $strings['code']; ?>:</label>
                 <input type="text" id="coupon_code" name="coupon_code">
-                <button type="submit" name="apply_discount" value="<?php echo $strings['apply']; ?>"></button>
-                <button type="submit" name="clear_discount" value="<?php echo $strings['clr2']; ?>"></button>
+                <button type="submit" name="apply_discount" value="<?php echo $strings['apply']; ?>"><?php echo $strings['apply']; ?></button>
+                <button type="submit" name="clear_discount" value="<?php echo $strings['clr2']; ?>"><?php echo $strings['clr2']; ?></button>
+
             </form>
         </div>
 
@@ -208,9 +213,9 @@ if (isset($_POST['clear_cart'])) {
         <div class="discount-info">
             <?php
             if (isset($_SESSION['discount_applied']) && $_SESSION['discount_applied']) {
-                echo "<p><?php echo $strings['discount']; ?> {$_SESSION['discount_amount']}<?php echo $strings['unit']; ?></p>";
+                echo "<p>" . $strings['discount'] . "{$_SESSION['discount_amount']}" . $strings['unit'] . " </p>";
             } elseif (isset($_SESSION['old_total'])) {
-                echo "<p><?php echo $strings['oldamount']; ?>  {$_SESSION['old_total']} <?php echo $strings['unit']; ?></p>";
+                echo "<p>" . $strings['oldamount'] .  "{$_SESSION['old_total']} ". $strings['unit']." </p>";
             }
             
             // Toplam tutarı hesapla ve göster
@@ -223,6 +228,7 @@ if (isset($_POST['clear_cart'])) {
             <?php endif; ?>
         </div>
     </div>
+    <script id="VLBar" title="<?= $strings['title'] ?>" category-id="2" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 </html>
 
