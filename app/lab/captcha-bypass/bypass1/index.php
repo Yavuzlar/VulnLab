@@ -40,7 +40,7 @@ $_SESSION['captcha'] = $captcha;
             <div class="col-md-6">
                 <h2 class="text-center"> <?php echo $strings['text']; ?></h2>
                 <form method="post" action="dogrulama.php">
-                Captcha:  <label id="yusuf" for="captcha"><?php echo $captcha; ?></label>
+                Captcha:  <label id="yusufnas" for="captcha"><?php echo $captcha; ?></label>
                     <input type="text" class="form-control" id="captcha" name="captcha" required>
                     <button type="submit" class="btn btn-primary btn-block mt-3"> <?php echo $strings['button']; ?></button>
                 </form>

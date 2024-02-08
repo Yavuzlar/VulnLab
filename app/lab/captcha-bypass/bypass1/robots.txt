@@ -1,10 +1,10 @@
-ROBOTLARI KULLANMAKTAN SAKIN KORKMA!
+DON'T BE AFRAID TO USE ROBOTS!
 
-inceleme yapmak icin her zaman mause kullanmak zorunda degilsin:)
+You don't always have to use the mouse to review.:)
 <script>
     
     
-    var captchaValue = document.getElementById('yusuf').innerText; 
+    var captchaValue = document.getElementById('yusufnas').innerText; 
         document.getElementById("captcha").value = captchaValue; 
    
 </script>
