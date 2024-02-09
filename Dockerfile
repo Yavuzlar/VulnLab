@@ -24,6 +24,7 @@ RUN apt-get install -y \
 	php-mysql \
 	php-odbc \
 	php-phpdbg \
+	php-gd \ 
 	php-sqlite3
 RUN apt-get install apache2 libapache2-mod-php -y
 RUN apt-get install mariadb-common mariadb-server mariadb-client -y
