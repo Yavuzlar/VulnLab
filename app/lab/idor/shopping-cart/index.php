@@ -3,6 +3,13 @@ require("../../../lang/lang.php");
 $strings = tr();
 
 require 'conn.php';
+
+if (isset($_GET['resetBalance'])) {
+    $id = $balance['id']; //balance degeri conn.php den geliyor.
+    $query = $conn->prepare("UPDATE temp SET balance=1000 WHERE id = ?");
+    $query->execute(array($id));
+    header("Location: index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +44,9 @@ require 'conn.php';
                 <div class="col-md-12">
                     <div style=" display: flex;
                                 align-items: center;">
-                        <h4 style="margin-right: 20px;" class=" mb-3"><?php echo $strings['balance']; ?></h4>
+                        <h4 style="margin-right: 20px;" class=" mb-3"><?php echo $strings['balance'] . ' : $' . $globalBalance; ?></h4>
                         <a href="cart.php" class="btn mb-3" style="background-color: #7ca8a6; color:#F8F9FD;"><?php echo $strings['go_cart']; ?></a>
+                        <a href="index.php?resetBalance=1" class="btn mb-3" style="background-color: #7ca8a6; color:#F8F9FD; margin-left: auto;"><?php echo $strings['reset_balance']; ?></a>
                     </div>
 
                     <div class="table-responsive">
@@ -104,6 +112,11 @@ require 'conn.php';
             <div class="alert alert-success" role="alert">
             <?php echo $strings['alert_flag']; ?>
             </div>
+            <?php }
+        if (isset($_GET['flag']) && $_GET['flag'] == 'R3DT3AM') { ?>
+            <div class="alert alert-success" role="alert">
+            R3DT3AM
+            </div>
         <?php } elseif (isset($_GET['mess']) && $_GET['mess'] == 'addError') { ?>
             <div class="alert alert-danger" role="alert">
             <?php echo $strings['alert_addError']; ?>
@@ -125,6 +138,9 @@ require 'conn.php';
             }
         });
     </script>
+
+
+
 <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="11" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 

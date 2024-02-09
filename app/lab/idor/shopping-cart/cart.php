@@ -37,7 +37,7 @@ require 'conn.php';
                 <div class="col-md-12">
                     <div style=" display: flex;
                                 align-items: center;">
-                        <h4 class="mb-3" style="margin-right: 20px;"><?php echo $strings['balance']; ?></h4>
+                        <h4 class="mb-3" style="margin-right: 20px;"><?php echo $strings['balance'] . ' : $' . $globalBalance; ?></h4>
                         <a href="index.php" class="btn mb-3" style="background-color: #7ca8a6; color:#F8F9FD; margin-right: 15px;"><?php echo $strings['go_back']; ?></a>
                         <a href="verify.php" class="btn mb-3" style="background-color: #7ca8a6; color:#F8F9FD;"><?php echo $strings['buy_cart']; ?></a>
                     </div>
@@ -49,6 +49,7 @@ require 'conn.php';
                                     <th>&nbsp;</th>
                                     <th><?php echo $strings['table_product']; ?></th>
                                     <th><?php echo $strings['table_price']; ?></th>
+                                    <th><?php echo $strings['piece']; ?></th>
                                     <th>&nbsp;</th>
                                 </tr>
                             </thead>
@@ -84,7 +85,8 @@ require 'conn.php';
                                                 <span>' . $details . '</span>
                                             </div>
                                         </td>
-                                        <td>$' . $product["price"] . '</td>
+                                        <td>$' . $product["price"] * $product["piece"] . '</td>
+                                        <td>' . $product["piece"] . '</td>
                                         
                                         <td>
                                         <a href="delete.php?bm90IGhlcmU=' . $product["id"] . '" class="btn" style="background-color: #99B19C; color:#F8F9FD;">' . $strings["delete_button"] . '</a>

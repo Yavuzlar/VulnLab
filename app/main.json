@@ -372,6 +372,23 @@
                 },
                 "url": "/lab/idor/about/",
                 "vulnID": 3
+            },
+            {
+                "id": 7,
+                "title": {
+                    "en": "Shopping Cart",
+                    "tr": "Alışveriş Sepeti",
+                    "fr": "Panier d'achat",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Purchase products for free.",
+                    "tr": "Ürünleri ücretsiz satın alın.",
+                    "fr": "Acheter des produits gratuitement.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/shopping-cart/",
+                "vulnID": 3
             }
         ]
     },
@@ -906,23 +923,6 @@
                     "ar": ""
                 },
                 "url": "/lab/race-condition/race-condition1/",
-                "vulnID": 11
-            },
-            {
-                "id": 2,
-                "title": {
-                    "en": "Race Condition in the validation form",
-                    "tr": "Doğrulama formunda yarış koşulu",
-                    "fr": "Race Condition dans le formulaire de validation",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "The creators of the site are very forgetful and needed a notebook :)",
-                    "tr": "Sitenin yaratıcıları çok unutkan ve bir not defterine ihtiyaçları vardı :)",
-                    "fr": "Les créateurs du site sont très distraits et avaient besoin d'un carnet de notes :)",
-                    "ar": ""
-                },
-                "url": "/lab/race-condition/race-validation/",
                 "vulnID": 11
             }
         ]

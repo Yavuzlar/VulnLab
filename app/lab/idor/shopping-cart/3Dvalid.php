@@ -1,20 +1,19 @@
 <?php
-require("../../../lang/lang.php");
-$strings = tr();
+   require("../../../lang/lang.php");
+   $strings = tr();
 
 require 'conn.php';
 $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
 
-    $query = $conn->prepare("INSERT INTO codes(code) VALUES (?)");
-    $query->execute(array(
-        $verificationCode,  
-    ));
+$query = $conn->prepare("INSERT INTO shopMessage(content,corner) VALUES (?,?)");
+$query->execute(array(
+    $verificationCode,
+    0,
+));
 
-    
-    $robotsTxt = file_get_contents('robots.txt');
-    $robotsTxt .= "\nCode: /$verificationCode/";
-    file_put_contents('robots.txt', $robotsTxt);
+
 ?>
+
 <head>
     <meta charset="UTF-8">
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css">
@@ -22,7 +21,6 @@ $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
     <link rel="stylesheet" href="css/style.css">
     <title><?php echo $strings['title']; ?></title>
     <style>
-        
         .showbox {
             position: fixed;
             bottom: 20px;
@@ -32,7 +30,7 @@ $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
             z-index: 1000;
         }
 
-       
+
         .showbox .alert {
             margin-bottom: 0;
         }
@@ -40,8 +38,13 @@ $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
 </head>
 
 <body style="background-color: #F8F9FD;">
-    <div class="d-flex justify-content-center align-items-center container " style="margin-top: 150px;">
-        <div class="card py-5 px-3">
+
+    <div class="d-flex justify-content-center align-items-center container " style="margin-top: 150px; ">
+        <div class="card py-4 px-3">
+            <div>
+                <a href="messageBox.php" class="btn mb-3" style="background-color: #7ca8a6; color:#F8F9FD;" target="_blank"><?php echo $strings['message_box_txt']; ?></a>
+            </div>
+
             <h5 class="d-flex justify-content-center align-items-center"><?php echo $strings['3D_title']; ?></h5>
             <span class="mobile-text"><?php echo $strings['3D_detail']; ?> <b style="color: #db6464;"><?php echo $strings['3D_number']; ?></b></span>
 
@@ -61,11 +64,11 @@ $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
     <div class="showbox" id="notification">
         <?php if (isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
             <div class="alert alert-danger" role="alert">
-            <?php echo $strings['alert_error']; ?>
+                <?php echo $strings['alert_error']; ?>
             </div>
         <?php } elseif (isset($_GET['mess']) && $_GET['mess'] == 'wrongCode') { ?>
             <div class="alert alert-danger" role="alert">
-             <?php echo $strings['alert_wrongCode']; ?>
+                <?php echo $strings['alert_wrongCode']; ?>
             </div>
         <?php } ?>
     </div>
@@ -80,7 +83,7 @@ $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
                 notificationDiv.style.display = "block";
                 setTimeout(function() {
                     notificationDiv.style.display = "none";
-                }, 3000); 
+                }, 3000);
             }
         });
     </script>

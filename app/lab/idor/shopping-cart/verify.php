@@ -10,11 +10,11 @@ foreach ($products as $product) {
     if ($product["isCart"] == 0) {
         continue;
     }else{
-        $sum += $product["price"] ;
+        $sum = $sum + ($product["price"] * $product["piece"]);
     }
 }
 
-if ($sum < 101 && $sum > 0) {
+if ($sum > 0 && $sum < $globalBalance) {
     // foreach ($products as $product) {
     //     if ($product["isCart"] == 0) {
     //         continue;
@@ -23,7 +23,7 @@ if ($sum < 101 && $sum > 0) {
     //     }
     // }
     header("Location: 3Dvalid.php?code=SSBoZWFyZCB0aGUgYWRtaW4gaXMgZm9yZ2V0ZnVs");
-} else if ($sum > 100) {
+} else if ($sum > $globalBalance) {
     header("Location: cart.php?mess=priceError");
 }else{
     header("Location: cart.php?mess=emptyCart");
