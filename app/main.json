@@ -962,5 +962,41 @@
             }
             
         ]
+    },
+    {
+        "id": 13,
+        "title": {
+            "en": "Path Traversal",
+            "tr": "Dizin Atlatma Saldırıları",
+            "fr": "Attaques de contournement d'annuaire",
+            "ar": ""
+        },
+        "description": {
+            "en": "Path Traversal attacks are a vulnerability that allows access to protected directories that are not accessible by the web server, through special requests added to the application parameters. Thanks to this vulnerability, attackers can access important files by accessing directories that are not normally accessible via the web.",
+            "tr": "Path Traversal (Dizin Atlatma) atakları, uygulama parametrelerine eklenen özel istekler ile web sunucu tarafından erişime açılmamış, koruma altında bulunan dizinlere erişim sağlamaya izin veren bir zafiyettir. Bu zafiyet sayesinde saldırganlar normal durumda web üzerinden erişilmesi mümkün olmayan dizinlere erişim yaparak önemli dosyalara ulaşabilirler.",
+            "fr": "Les attaques Path Traversal sont une vulnérabilité qui permet d'accéder à des répertoires protégés qui ne sont pas accessibles par le serveur Web, via des requêtes spéciales ajoutées aux paramètres de l'application. Grâce à cette vulnérabilité, les attaquants peuvent accéder à des fichiers importants en accédant à des répertoires qui ne sont normalement pas accessibles via le Web.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/path.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Path Traversal-Basic",
+                    "tr": "Path Traversal-Basic",
+                    "fr": "Path Traversal-Basic",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Don't forget to check out the URL while reviewing the books.",
+                    "tr": "Kitapları incelerken URL'lerine bakmayı unutmayın.",
+                    "fr": "Lorsque vous lisez les livres, n'oubliez pas de regarder leurs URL.",
+                    "ar": ""
+                },
+                "url": "/lab/path/",
+                "vulnID": 13
+            }           
+        ]
     }
+    
 ]
