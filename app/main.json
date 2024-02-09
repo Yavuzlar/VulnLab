@@ -830,9 +830,9 @@
                     "ar": ""
                 },
                 "description": {
-                    "en": "JWT attacks involve a user sending modified JWTs to the server in order to achieve a malicious goal. Typically, this goal is to bypass authentication and access controls by impersonating another user who has already been authenticated.",
-                    "tr": "JWT saldırıları, kötü niyetli bir hedefe ulaşmak için bir kullanıcının değiştirilmiş JWT'leri sunucuya göndermesini içerir. Tipik olarak bu amaç, daha önce kimliği doğrulanmış başka bir kullanıcının kimliğine bürünerek kimlik doğrulamayı ve erişim kontrollerini atlamaktır.",
-                    "fr": "Les attaques JWT impliquent qu'un utilisateur envoie des JWT modifiés au serveur afin d'atteindre un objectif malveillant. Généralement, cet objectif est de contourner l'authentification et les contrôles d'accès en usurpant l'identité d'un autre utilisateur déjà authentifié.",
+                    "en": "Increase your authority by logging into the system and performing a JWT attack. Login information Yavuzlar->Vulnlab",
+                    "tr": "Sisteme giriş yaparak JWT saldırısı yaparak yetkinizi yükseltin. Giriş bilgileri Yavuzlar->Vulnlab",
+                    "fr": "Augmentez votre autorité en vous connectant au système et en effectuant une attaque JWT. Informations de connexion Yavuzlar->Vulnlab",
                     "ar": ""
                 },
                 "url": "/lab/insecure-deserialization/jwt-attack/",
