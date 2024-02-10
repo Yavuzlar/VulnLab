@@ -198,7 +198,7 @@ if (isset($_POST['message'])) {
 		</div>
 	</div>
 </main>
-<script id="VLBar" title="<?= $strings["title"]; ?>" category-id="11" src="/public/assets/js/vlnav.min.js"></script>
+<script id="VLBar" title="<?= $strings["title"]; ?>" category-id="3" src="/public/assets/js/vlnav.min.js"></script>
 
 </body>
 </html>

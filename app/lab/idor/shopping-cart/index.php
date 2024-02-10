@@ -30,6 +30,7 @@ if (isset($_GET['resetBalance'])) {
             display: none;
             z-index: 1000;
         }
+
         .showbox .alert {
             margin-bottom: 0;
         }
@@ -67,13 +68,13 @@ if (isset($_GET['resetBalance'])) {
                                 $title = "";
                                 $details = "";
                                 foreach ($products as $product) {
-                                    if($product["id"] == 1){
+                                    if ($product["id"] == 1) {
                                         $title = $strings["p1_title"];
                                         $details = $strings["p1_detail"];
-                                    }else if($product["id"] == 2){
+                                    } else if ($product["id"] == 2) {
                                         $title = $strings["p2_title"];
                                         $details = $strings["p2_detail"];
-                                    }else if($product["id"] == 3){
+                                    } else if ($product["id"] == 3) {
                                         $title = $strings["p3_title"];
                                         $details = $strings["p3_detail"];
                                     }
@@ -101,29 +102,30 @@ if (isset($_GET['resetBalance'])) {
             </div>
         </div>
     </section>
-<!---------------------------------------------- Alert Func -------------------------------------------------->
+    <!---------------------------------------------- Alert Func -------------------------------------------------->
     <div class="showbox" id="notification">
         <?php if (isset($_GET['mess']) && $_GET['mess'] == 'success') { ?>
-            <div class="alert alert-success" role="alert">
-            <?php echo $strings['alert_successAdd']; ?>
+            <div class="alert alert-success mb-2" role="alert">
+                <?php echo $strings['alert_successAdd']; ?>
             </div>
         <?php }
-        if (isset($_GET['flag']) && $_GET['flag'] == 'ZmxhZ1N1Y2Nlc3M=') { ?>
-            <div class="alert alert-success" role="alert">
-            <?php echo $strings['alert_flag']; ?>
+        if (isset($_GET['text'])) { ?>
+            <div class="alert alert-success mb-2" role="alert">
+                <?php $text = $_GET['text'];
+                      echo $strings['alert_purchased'] .$text; ?>
             </div>
-            <?php }
+        <?php }
         if (isset($_GET['flag']) && $_GET['flag'] == 'R3DT3AM') { ?>
-            <div class="alert alert-success" role="alert">
-            R3DT3AM
+            <div class="alert alert-success mb-2" role="alert">
+                R3DT3AM
             </div>
         <?php } elseif (isset($_GET['mess']) && $_GET['mess'] == 'addError') { ?>
-            <div class="alert alert-danger" role="alert">
-            <?php echo $strings['alert_addError']; ?>
+            <div class="alert alert-danger mb-2" role="alert">
+                <?php echo $strings['alert_addError']; ?>
             </div>
         <?php } ?>
     </div>
-<!-- 
+    <!-- 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script> -->
 
@@ -134,14 +136,14 @@ if (isset($_GET['resetBalance'])) {
                 notificationDiv.style.display = "block";
                 setTimeout(function() {
                     notificationDiv.style.display = "none";
-                }, 3000); 
+                }, 5000);
             }
         });
     </script>
 
 
 
-<script id="VLBar" title="<?= $strings["title"]; ?>" category-id="11" src="/public/assets/js/vlnav.min.js"></script>
+    <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="3" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 
 </html>

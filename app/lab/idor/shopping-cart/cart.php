@@ -144,11 +144,11 @@ require 'conn.php';
                 notificationDiv.style.display = "block";
                 setTimeout(function() {
                     notificationDiv.style.display = "none";
-                }, 3000); 
+                }, 5000); 
             }
         });
     </script>
-<script id="VLBar" title="<?= $strings["title"]; ?>" category-id="11" src="/public/assets/js/vlnav.min.js"></script>
+<script id="VLBar" title="<?= $strings["title"]; ?>" category-id="3" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 
 </html>

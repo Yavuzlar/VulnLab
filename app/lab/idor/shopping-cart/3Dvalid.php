@@ -1,6 +1,6 @@
 <?php
-   require("../../../lang/lang.php");
-   $strings = tr();
+require("../../../lang/lang.php");
+$strings = tr();
 
 require 'conn.php';
 $verificationCode = str_pad(mt_rand(0, 9999), 4, '0', STR_PAD_LEFT);
@@ -83,9 +83,9 @@ $query->execute(array(
                 notificationDiv.style.display = "block";
                 setTimeout(function() {
                     notificationDiv.style.display = "none";
-                }, 3000);
+                }, 5000);
             }
         });
     </script>
-    <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="11" src="/public/assets/js/vlnav.min.js"></script>
+    <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="3" src="/public/assets/js/vlnav.min.js"></script>
 </body>
