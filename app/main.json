@@ -837,6 +837,23 @@
                 },
                 "url": "/lab/insecure-deserialization/random-nick-generator/",
                 "vulnID": 9
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "JWT Attack",
+                    "tr": "JWT Saldırısı",
+                    "fr": "JWT Attaque",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Increase your authority by logging into the system and performing a JWT attack. Login information Yavuzlar->Vulnlab",
+                    "tr": "Sisteme giriş yaparak JWT saldırısı yaparak yetkinizi yükseltin. Giriş bilgileri Yavuzlar->Vulnlab",
+                    "fr": "Augmentez votre autorité en vous connectant au système et en effectuant une attaque JWT. Informations de connexion Yavuzlar->Vulnlab",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/jwt-attack/",
+                "vulnID": 9
             }
         ]
     },
