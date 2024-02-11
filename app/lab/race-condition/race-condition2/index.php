@@ -1,12 +1,6 @@
 <?php
 
-
 require("../../../lang/lang.php");
-
-
-
-
-
 $strings = tr();
 
 session_start(); // Oturumu başlat
@@ -26,32 +20,40 @@ if (isset($_POST['add_to_cart'])) {
     // Sepet durumunu güncelle
     $_SESSION['cart'] = $cart;
 }
+
 // İndirim kodu işlemleri
 if (isset($_POST['apply_discount'])) {
     $coupon_code = $_POST['coupon_code'];
 
     // İndirim kodu kullanılmadıysa ve doğru indirim kodu girildiyse
     if (!isset($_SESSION['discount_applied']) && $coupon_code === "sbrvtn50") {
+        // Oturumu kilitle
+        session_write_close();
+
         // Kısa bir süre bekletme 
-        sleep(1);
+        sleep(3);
+
+        // Tekrar oturumu başlat
+        session_start();
 
         // Sepetin toplam tutarını sakla
         $_SESSION['old_total'] = isset($_SESSION['old_total']) ? $_SESSION['old_total'] : array_sum($_SESSION['cart']);
-        
+
         // Toplam tutar 50 TL'den büyük veya eşitse, indirimi uygula
         if ($_SESSION['old_total'] >= 50) {
             $_SESSION['cart'][] = -50; // Sepete indirim olarak ekle
-            sleep(1);
             $_SESSION['discount_applied'] = true; // İndirim uygulandı işareti
             $_SESSION['discount_amount'] = 50; // Uygulanan indirim miktarını sakla
-            echo "<script>alert(".  $strings['successful'] . ")</script>";
+            echo "<script>alert('" . $strings['successful'] . "')</script>";
+
         } else {
-            echo "<script>alert(" . $strings['warning'] .")</script>";
+            echo "<script>alert('" . $strings['warning'] ."')</script>";
         }
     } else {
-        echo "<scriptalert(". $strings['unsuccessful'] .")</script>";
+        echo "<script>alert('". $strings['unsuccessful'] ."')</script>";
     }
 }
+
 
 // İndirim kodu temizleme işlemi
 if (isset($_POST['clear_discount'])) {
@@ -62,24 +64,15 @@ if (isset($_POST['clear_discount'])) {
         $cart_index = array_search(-$discount_amount, $_SESSION['cart']);
         if ($cart_index !== false) {
             unset($_SESSION['cart'][$cart_index]);
-            sleep(1);
         }
     }
     unset($_SESSION['discount_amount']); // İndirim miktarını temizle
     unset($_SESSION['old_total']); // Önceki toplamı temizle
-    sleep(1);
-    // İndirim uygulanmamış toplamı hesapla
-    $old_total = isset($_SESSION['old_total']) ? $_SESSION['old_total'] : array_sum($_SESSION['cart']);
-    
 }
-
-
-
 
 // Sepeti temizleme işlemi
 if (isset($_POST['clear_cart'])) {
     $_SESSION['cart'] = []; // Sepeti boşalt
-
 }
 
 ?>
@@ -218,6 +211,7 @@ if (isset($_POST['clear_cart'])) {
         <!-- İndirim Bilgisi ve Toplam -->
         <div class="discount-info">
             <?php
+            sleep(2);
             if (isset($_SESSION['discount_applied']) && $_SESSION['discount_applied']) {
                 echo "<p>" . $strings['discount'] . "{$_SESSION['discount_amount']}" . $strings['unit'] . " </p>";
             } elseif (isset($_SESSION['old_total'])) {
@@ -226,7 +220,7 @@ if (isset($_POST['clear_cart'])) {
             
             // Toplam tutarı hesapla ve göster
             $total = array_sum(array_filter($_SESSION['cart'], 'is_numeric')); 
-            echo "<p>Toplam: $total TL</p>";
+            echo "<p> ". $strings['total'] . "$total " . $strings['unit'] . "</p>";
             ?>
             <!-- İndirim Kodu Mesajı -->
             <?php if (isset($_SESSION['discount_applied']) && $_SESSION['discount_applied'] && $_SESSION['discount_amount'] == 50) : ?>
@@ -234,7 +228,7 @@ if (isset($_POST['clear_cart'])) {
             <?php endif; ?>
         </div>
     </div>
-    <script id="VLBar" title="<?= $strings['title'] ?>" category-id="2" src="/public/assets/js/vlnav.min.js"></script>
+    <script id="VLBar" title="<?= $strings['title'] ?>" category-id="11" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 </html>
 
