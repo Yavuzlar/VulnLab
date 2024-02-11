@@ -15,7 +15,6 @@ h1 {
     color: #333333;
 }
 
-/* Ürün kartları */
 .products-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
