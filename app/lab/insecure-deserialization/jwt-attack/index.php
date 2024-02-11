@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    <a href="https://github.com/danielmiessler/SecLists/blob/master/Passwords/darkweb2017-top100.txt" class="btn btn-primary mt-3 ml-3">Word List</a>
+    <a href="https://github.com/danielmiessler/SecLists/blob/master/Passwords/darkweb2017-top100.txt" class="btn btn-primary mt-3 ml-3"><?php echo $lang["WordList"]?></a>
     <?php if(isset($_COOKIE["jwt"]) && $decodedJWT["username"] == "administrator"):?>
         <a href="clearJWT.php" class="btn btn-primary mt-3 ml-3"><?php echo $lang["Cookie"]?></a>
         <div class="d-flex justify-content-center" style="margin-top: 100px;">
@@ -85,6 +85,10 @@
                             </button>
                         </form>
                     </div>
+                </div>
+                <div class="mb-3">
+                    <b><?php echo $lang["LoginCredential"]?>:</b>
+                    Yavuzlar:Vulnlab
                 </div>
             </div>
         </div>
