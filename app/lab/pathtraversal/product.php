@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Group Details</title>
     <style>
         header {
     background-color: #ffffff;
@@ -51,24 +51,40 @@
         }
 
     </style>
-    
-
 </head>
+<body>
 <header>
-    <h1 id="page-title">En Popüler Hacker Grupları</h1>
-
+    <h1 id="page-title">Product Details</h1>
 </header>
 
-<body>
+<div class="product-details">
+    <?php
+    $productId = $_GET['productId'];
 
+    $filePath = isset($productId) ? "../../../../../" . $productId : "";
+
+    $fileContent = file_get_contents($filePath);
+
+    if ($fileContent !== false) {
+        echo "<pre>" . htmlspecialchars($fileContent) . "</pre>";
+    } else {
+        echo "Invalid product ID.";
+    }
+    ?>
+</div>
+
+
+<div>
 <div class="product-details">
     <img id="product-image" src="" alt="Ürün Resmi">
-    <h2 id="product-name">Ürün Adı</h2>
-    <p id="product-description">detaylar</p>
+    <h2 id="product-name">Group Name</h2>
+    <p id="product-description">Details</p>
+</div>
+
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
         var urlParams = new URLSearchParams(window.location.search);
         var productId = urlParams.get('productId');
 
