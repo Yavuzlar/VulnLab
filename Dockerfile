@@ -19,6 +19,7 @@ RUN apt-get install -y \
 	php-common \
 	php-curl \
 	php-dev \
+        php-gd \
 	php-json \
 	php-mbstring \
 	php-mysql \
