@@ -125,10 +125,13 @@ http_response_code($httpStatus);
 
     document.getElementById('captcha-result').innerHTML = newNum1 + ' + ' + newNum2 + ' = ?';
 
+    document.getElementsByName('num1')[0].value = newNum1;
+    document.getElementsByName('num2')[0].value = newNum2;
+
     document.getElementById('captcha').value = '';
 
     document.getElementById('error-message').innerHTML = '';
-  }
+}
 
         function validateForm() {
             var captchaAnswer = document.getElementById('captcha').value;
