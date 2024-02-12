@@ -133,14 +133,16 @@ http_response_code($httpStatus);
     document.getElementById('error-message').innerHTML = '';
 }
 
-        function validateForm() {
-            var captchaAnswer = document.getElementById('captcha').value;
-            if (!captchaAnswer) {
-                document.getElementById('error-message').innerHTML = 'Lütfen captcha cevabını girin.';
-                return false;
-            }
-            return true;
-        }
+ function validateForm() {
+    var captchaAnswer = document.getElementById('captcha').value;
+    if (!captchaAnswer) {
+        // 'empty' ifadesini kullanarak mesajı al
+        var errorMessage = '<?= $strings["empty"]; ?>';
+        document.getElementById('error-message').innerHTML = errorMessage;
+        return false;
+    }
+    return true;
+ }
     </script>
 </body>
 </html>
