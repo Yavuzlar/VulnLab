@@ -962,5 +962,41 @@
             }
             
         ]
+    },
+
+    {
+        "id": 13,
+        "title": {
+            "en": "API Hacking",
+            "tr": "API Saldırısı",
+            "fr": "Violation de l'API",
+            "ar": ""
+        },
+        "description": {
+            "en": "API hacking is a type of attack where malicious individuals or hackers attempt to gain unauthorized access to applications or systems through an API.",
+            "tr": "API hacking, kötü niyetli kişilerin veya hacker'ların, bir API üzerinden uygulama veya sistemlere yetkisiz erişim elde etmeye çalıştığı bir saldırı türüdür.",
+            "fr": "L'API hacking est un type d'attaque où des individus malveillants ou des pirates informatiques tentent d'obtenir un accès non autorisé à des applications ou des systèmes via une API.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/api.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "API Documentation",
+                    "tr": "API Belgeleri",
+                    "fr": "Documentation de l'API",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "You need to find a file. Locate and delete this file.",
+                    "tr": "Bulmanız gereken bir dosya var. Bu dosyayı bulup siliniz",
+                    "fr": "Vous devez trouver un fichier. Localisez-le et supprimez ce fichier.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/api-hacking1/",
+                "vulnID": 13
+            }
+        ]
     }
 ]
