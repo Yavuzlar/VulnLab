@@ -996,5 +996,40 @@
             }
             
         ]
+    },
+    {
+        "id": 13,
+        "title": {
+            "en": "Captcha Bypass",
+            "tr": "Captcha Bypass",
+            "fr": "Contournement Du captcha",
+            "ar": ""
+        },
+        "description": {
+            "en": "Captcha bypass is an attempt to bypass the captcha system in order to bypass security measures on a website or application.",
+            "tr": "Captcha bypass, bir web sitesi veya uygulamadaki güvenlik önlemlerini atlamak amacıyla captcha sistemini geçme girişimidir.",
+            "fr": "Le contournement du Captcha est une tentative de contourner le système captcha afin de contourner les mesures de sécurité sur un site Web ou une application.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/captcha-bypass.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Broken Captcha",
+                    "tr": "Bozuk Captcha",
+                    "fr": "Captcha cassé",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Do not enter the wrong value into the captcha.",
+                    "tr": "Captchaya sakın yanlış değer girme.",
+                    "fr": "Ne saisissez pas une mauvaise valeur dans le captcha.",
+                    "ar": ""
+                },
+                "url": "/lab/captcha-bypass/bypass/",
+                "vulnID": 13
+            }
+        ]
     }
 ]
