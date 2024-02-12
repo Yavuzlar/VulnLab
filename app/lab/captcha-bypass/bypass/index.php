@@ -119,16 +119,16 @@ http_response_code($httpStatus);
 
     <script id="VLBar" title="<?= $strings['title']; ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
     <script>
-        function refreshCaptcha() {
-            var newNum1 = Math.floor(Math.random() * 10) + 1;
-            var newNum2 = Math.floor(Math.random() * 10) + 1;
+       function refreshCaptcha() {
+    var newNum1 = Math.floor(Math.random() * 10) + 1;
+    var newNum2 = Math.floor(Math.random() * 10) + 1;
 
-            document.getElementById('captcha-result').innerHTML = newNum1 + ' + ' + newNum2 + ' = ?';
+    document.getElementById('captcha-result').innerHTML = newNum1 + ' + ' + newNum2 + ' = ?';
 
-            document.getElementById('captcha').value = '';
+    document.getElementById('captcha').value = '';
 
-            document.getElementById('error-message').innerHTML = '';
-        }
+    document.getElementById('error-message').innerHTML = '';
+  }
 
         function validateForm() {
             var captchaAnswer = document.getElementById('captcha').value;
