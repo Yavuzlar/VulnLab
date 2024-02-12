@@ -103,5 +103,13 @@
         "res": {
             "1": "https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection"
         }
+    },
+
+    {
+        "id": "13",
+        "lab": "API Hacking",
+        "res": {
+            "1": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting"
+        }
     }
-]
+] 

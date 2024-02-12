@@ -1035,5 +1035,41 @@
             }
             
         ]
+    },
+    {
+        "id": 13,
+        "title": {
+            "en": "API Hacking",
+            "tr": "API Saldırısı",
+            "fr": "API Hacking", 
+            "ar": ""
+        },
+        "description": {
+            "en": "API hacking is the act of exploiting vulnerabilities in an application or web deployment API by using it for malicious purposes. Such attacks can result in unauthorized access, leaking data at sensitive intervals, or denial of service.",
+            "tr": "API hacking, bir uygulamanın veya web sitesinin API'sini kötü niyetli amaçlarla kullanarak güvenlik açıklarını sömürme eylemidir. Bu tür saldırılar, yetkisiz erişim elde etmek, hassas verilere erişmek, veri sızdırmak veya hizmeti engellemek gibi sonuçlar doğurabilir.",
+            "fr": "Le piratage d'API consiste à exploiter les vulnérabilités d'une application ou d'une API de déploiement Web en l'utilisant à des fins malveillantes. De telles attaques peuvent entraîner un accès non autorisé, une fuite de données à des intervalles sensibles ou un déni de service.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/api.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Running Scripts with API Hacking",
+                    "tr": "API Hacking ile Script Çalıştırma",
+                    "fr": "Exécuter des scripts avec le piratage d'API",
+                    "ar": ""
+                    
+                },
+                "description": {
+                    "en": "Find a way to suppress the 1 per page warning.",
+                    "tr": "Sayfada 1 uyarısı bastırmanın bir yolunu bulunuz.",
+                    "fr": "Trouvez un moyen de supprimer l’avertissement 1 par page.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/api-hacking/",
+                "vulnID": 13
+            }
+        ]
     }
 ]
