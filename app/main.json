@@ -1061,9 +1061,9 @@
                     "ar": ""
                 },
                 "description": {
-                    "en": "Do not enter the wrong value into the captcha.",
-                    "tr": "Captchaya sakın yanlış değer girme.",
-                    "fr": "Ne saisissez pas une mauvaise valeur dans le captcha.",
+                    "en": "Bypass captcha like a hacker, not manually.",
+                    "tr": "Captchayı manuel olarak değil bir hacker gibi atlat.",
+                    "fr": "Contournez le captcha comme un pirate informatique, pas manuellement.",
                     "ar": ""
                 },
                 "url": "/lab/captcha-bypass/bypass/",
