@@ -837,6 +837,23 @@
                 },
                 "url": "/lab/insecure-deserialization/random-nick-generator/",
                 "vulnID": 9
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "JWT Attack",
+                    "tr": "JWT Saldırısı",
+                    "fr": "JWT Attaque",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Increase your authority by logging into the system and performing a JWT attack. Login information Yavuzlar->Vulnlab",
+                    "tr": "Sisteme giriş yaparak JWT saldırısı yaparak yetkinizi yükseltin. Giriş bilgileri Yavuzlar->Vulnlab",
+                    "fr": "Augmentez votre autorité en vous connectant au système et en effectuant une attaque JWT. Informations de connexion Yavuzlar->Vulnlab",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/jwt-attack/",
+                "vulnID": 9
             }
         ]
     },
@@ -941,7 +958,29 @@
                 },
                 "url": "/lab/race-condition/race-condition1/",
                 "vulnID": 11
+
+                
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Discount Code Application in Shopping Cart",
+                    "tr": "Alışveriş Sepeti İçinde İndirim Kodu Uygulaması",
+                    "fr": "Application de code de réduction dans le panier d'achat",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "This lab demonstrates the implementation of a discount code feature in a shopping cart system. Users can enter a valid discount code during checkout to receive a discount on their total purchase amount.",
+                    "tr": "Bu laboratuvar, bir alışveriş sepeti sistemine indirim kodu özelliğinin nasıl uygulanacağını gösterir. Kullanıcılar, ödeme sırasında geçerli bir indirim kodu girebilir ve toplam satın alma tutarlarından indirim alabilirler.",
+                    "fr": "Ce laboratoire illustre la mise en œuvre d'une fonctionnalité de code de réduction dans un système de panier d'achat. Les utilisateurs peuvent saisir un code de réduction valide lors du paiement pour bénéficier d'une réduction sur le montant total de leur achat.",
+                    "ar": ""
+                },
+                "url": "/lab/race-condition/race-condition2/",
+                "vulnID": 11
+
+                
             }
+            
         ]
     },
     {
