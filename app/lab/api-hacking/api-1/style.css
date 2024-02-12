@@ -1,0 +1,42 @@
+        body {
+
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 16px); /* Düğme genişliğini ayarlamak için */
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #203069;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: calc(100% - 16px); /* Düğme genişliğini ayarlamak için */
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #203069;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #203069;
+    }
