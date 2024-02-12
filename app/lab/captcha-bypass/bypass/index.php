@@ -1,4 +1,3 @@
-
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -22,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num1_posted = isset($_POST['num1']) ? (int)$_POST['num1'] : null;
     $num2_posted = isset($_POST['num2']) ? (int)$_POST['num2'] : null;
 
-    // Mevcut captcha değerlerini kaydet
     $oncekiNum1 = $_SESSION['num1'];
     $oncekiNum2 = $_SESSION['num2'];
 
@@ -38,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $httpStatus = 200; 
         } else {
             $httpStatus = 400; 
-            // Yanlış captcha girildiğinde önceki captcha değerlerini geri yükleyin
             $_SESSION['num1'] = $oncekiNum1;
             $_SESSION['num2'] = $oncekiNum2;
         }
@@ -69,6 +66,10 @@ http_response_code($httpStatus);
         .wrong-answer .captcha-answer {
             display: block;
         }
+
+        .refresh-button {
+            float: right;
+        }
     </style>
     <title><?= $strings['title']; ?></title>
 </head>
@@ -78,7 +79,7 @@ http_response_code($httpStatus);
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center mb-4"><?= $strings['message']; ?></h2>
-                <form method="post">
+                <form method="post" onsubmit="return validateForm()">
                     <div class="form-group">
                         <label for="username"><?= $strings['name']; ?></label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="...">
@@ -89,25 +90,26 @@ http_response_code($httpStatus);
                             placeholder="..."></textarea>
                     </div>
                     <div class="form-group <?php echo ($message === "basarisiz") ? 'wrong-answer' : ''; ?>">
-                        <label for="captcha"><?= $strings['captcha']; ?> <br></label>
-                        <?php
-                        if ($message === "basarisiz") {
-                            echo '<div class="captcha-answer wrong-answer"><label for="captcha-result">' . $oncekiNum1 . ' + ' . $oncekiNum2 . ' = ?</label></div><br>';
-                        } else {
-                            echo '<div class="captcha-answer"><label for="captcha-result">' . $num1 . ' + ' . $num2 . ' = ?</label></div><br>';
-                        }
-                        ?>
-                        <input type="hidden" name="num1" value="<?= $num1; ?>">
-                        <input type="hidden" name="num2" value="<?= $num2; ?>">
-                        <input type="text" class="form-control" id="captcha" name="captcha"
-                            placeholder="<?= $strings['captcha']; ?>" value="<?= isset($_POST['captcha']) ? htmlspecialchars($_POST['captcha']) : '' ?>">
-                    </div>
+    <label for="captcha"><?= $strings['captcha']; ?> <br></label>
+    <div class="d-flex justify-content-between align-items-center">
+        <?php
+        echo '<div class="captcha-answer" id="captcha-result"><label>' . $num1 . ' + ' . $num2 . ' = ?</label></div>';
+        ?>
+        <div>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="refreshCaptcha()"><?= $strings['yenile']; ?></button>
+        </div>
+    </div>
+    <input type="hidden" name="num1" value="<?= $num1; ?>">
+    <input type="hidden" name="num2" value="<?= $num2; ?>">
+    <input type="text" class="form-control" id="captcha" name="captcha"
+        placeholder="<?= $strings['captcha']; ?>" value="<?= isset($_POST['captcha']) ? htmlspecialchars($_POST['captcha']) : '' ?>">
+</div>
                     <button type="submit" class="btn btn-primary btn-block"><?= $strings['submit']; ?></button>
                     <?php
                     if ($message === "basarili") {
                         echo '<p class="mt-3 text-success">' . $strings['basarili'] . '</p>';
                     } elseif ($message === "basarisiz") {
-                        echo '<p class="mt-3 text-danger">' . $strings['basarisiz'] . '</p>';
+                        echo '<p id="error-message" class="mt-3 text-danger">' . $strings['basarisiz'] . '</p>';
                     }
                     ?>
                 </form>
@@ -116,5 +118,26 @@ http_response_code($httpStatus);
     </div>
 
     <script id="VLBar" title="<?= $strings['title']; ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
+    <script>
+        function refreshCaptcha() {
+            var newNum1 = Math.floor(Math.random() * 10) + 1;
+            var newNum2 = Math.floor(Math.random() * 10) + 1;
+
+            document.getElementById('captcha-result').innerHTML = newNum1 + ' + ' + newNum2 + ' = ?';
+
+            document.getElementById('captcha').value = '';
+
+            document.getElementById('error-message').innerHTML = '';
+        }
+
+        function validateForm() {
+            var captchaAnswer = document.getElementById('captcha').value;
+            if (!captchaAnswer) {
+                document.getElementById('error-message').innerHTML = 'Lütfen captcha cevabını girin.';
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
