@@ -2,11 +2,7 @@
 $strings = tr();
 session_start();
 
-if ($_SESSION['dogrulama'] != true)
- {
-   header("location:/lab/captcha-bypass/bypass1/index.php");
-    exit();
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -15,7 +11,7 @@ if ($_SESSION['dogrulama'] != true)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <title>BYPASS BASARILI</title>
+    <title>GİRİŞ BAŞARILI</title>
 </head>
 <body>
 <h2 class="text-center"> <?php echo $strings['finish']; ?></h2>

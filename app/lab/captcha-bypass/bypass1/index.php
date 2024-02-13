@@ -1,6 +1,5 @@
 <?php
 session_start();
-session_unset();
 require("../../../lang/lang.php");
 $strings = tr();
 
@@ -17,10 +16,27 @@ function generateCaptcha() {
 }
 
 
+if (!isset($_SESSION['captchas'])) {
+    $_SESSION['captchas'] = array();
+}
+
+
 $captcha = generateCaptcha();
-$_SESSION['captcha'] = $captcha;
+
+array_push($_SESSION['captchas'], $captcha);
 
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $submitted_captcha = $_POST['captcha'];
+  
+    if (in_array($submitted_captcha, $_SESSION['captchas'])) {
+        echo "Giriş başarılı!";
+        header("location:/lab/captcha-bypass/bypass1/welcome.php");
+    } else {
+        echo "Captcha doğrulaması başarısız!";
+        
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,8 +55,8 @@ $_SESSION['captcha'] = $captcha;
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center"> <?php echo $strings['text']; ?></h2>
-                <form method="post" action="dogrulama.php">
-                Captcha:  <label id="yusufnas" for="captcha"><?php echo $captcha; ?></label>
+                <form method="post" action="index.php">
+                    Captcha:  <label id="yusufnas" for="captcha"><?php echo $captcha; ?></label>
                     <input type="text" class="form-control" id="captcha" name="captcha" required>
                     <button type="submit" class="btn btn-primary btn-block mt-3"> <?php echo $strings['button']; ?></button>
                 </form>
@@ -49,30 +65,7 @@ $_SESSION['captcha'] = $captcha;
     </div>
 
     
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
 </body>
 </html>
-
 <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
-
-<script>
-    
-    function sayfaYenile() {
-      location.reload(); 
-    }
-    setInterval(sayfaYenile, 3000); // 3000 milisaniye = 3 saniye
-    
-    
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-    
-    document.onselectstart = function() {
-        return false;
-    }
-
-
-  </script>
-  
