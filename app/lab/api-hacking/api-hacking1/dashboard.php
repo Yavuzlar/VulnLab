@@ -44,6 +44,9 @@ if (!isset($_SESSION['id'])) {
     <div class="container mt-5">
         <h1 class="mb-4"><?php echo $strings['labtitle']; ?> </h1>
 
+        <button type="button" class="btn btn-secondary mt-2" onclick="resetImages()"><?php echo $strings['resetlab'] ?></button>
+
+
         <!-- Image Upload Form -->
         <form id="uploadForm" enctype="multipart/form-data" class="mb-4">
             <div class="custom-file">
@@ -141,6 +144,19 @@ if (!isset($_SESSION['id'])) {
             })
             .catch(error => console.error('Error:', error));
         }
+
+        function resetImages() {
+            fetch('api/reset_images.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('<?php echo $strings['reset']; ?>');
+                        fetchImages();
+                    }
+                })
+                .catch(error => console.error('Hata:', error));
+        }
+
 
         // Initial fetch to display uploaded images on page load
         fetchImages();
