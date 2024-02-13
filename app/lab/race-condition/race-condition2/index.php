@@ -211,7 +211,7 @@ if (isset($_POST['clear_cart'])) {
         <!-- İndirim Bilgisi ve Toplam -->
         <div class="discount-info">
             <?php
-            sleep(2);
+            
             if (isset($_SESSION['discount_applied']) && $_SESSION['discount_applied']) {
                 echo "<p>" . $strings['discount'] . "{$_SESSION['discount_amount']}" . $strings['unit'] . " </p>";
             } elseif (isset($_SESSION['old_total'])) {
