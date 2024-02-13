@@ -981,7 +981,7 @@
         "imgURL": "public/assets/img/vulns/api.png",
         "labs": [
             {
-                "id": 1,
+                "id": 2,
                 "title": {
                     "en": "API Documentation",
                     "tr": "API Belgeleri",
@@ -990,8 +990,8 @@
                 },
                 "description": {
                     "en": "You need to find a file. Locate and delete this file.",
-                    "tr": "Bulmanız gereken bir dosya var. Bu dosyayı bulup siliniz",
-                    "fr": "Vous devez trouver un fichier. Localisez-le et supprimez ce fichier.",
+                    "tr": "Using the ID of the admin user, delete the \"delete_me.jpg\" file.",
+                    "fr": "Supprimez le fichier \"delete_me.jpg\" en utilisant l'identifiant de l'utilisateur administrateur.",
                     "ar": ""
                 },
                 "url": "/lab/api-hacking/api-hacking1/",

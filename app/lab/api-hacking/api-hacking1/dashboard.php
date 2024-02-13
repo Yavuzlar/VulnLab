@@ -1,12 +1,33 @@
 <?php
 require("../../../lang/lang.php");
 $strings = tr();
+
 session_start();
 
 if (!isset($_SESSION['username'])) {
     header('Location: index.php');
     exit;
 }
+
+if (!isset($_SESSION['id'])) {
+    $usersFilePath = __DIR__ . '/api/users.json';
+
+    if (!file_exists($usersFilePath)) {
+        die();
+    }
+
+    $users = json_decode(file_get_contents($usersFilePath), true);
+
+    $loggedInUser = $_SESSION['username'];
+
+    foreach ($users as $user) {
+        if ($user['username'] === $loggedInUser) {
+            $_SESSION['user_id'] = $user['id'];
+            break;
+        }
+    }
+}
+
 
 ?>
 

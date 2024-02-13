@@ -12,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
 
     if (file_exists($targetFile) && unlink($targetFile)) {
         $response['success'] = true;
-        $response['message'] = "Image deleted successfully.";
+        $response['message'] = $strings['success2'];
     } else {
         $response['success'] = false;
-        $response['message'] = "Error deleting the image.";
+        $response['message'] = $strings['deleteerr'];
     }
 } else {
     $response['success'] = false;
-    $response['message'] = "Invalid request method.";
+    $response['message'] = $strings['requestmethod'];
 }
 
 echo json_encode($response);
