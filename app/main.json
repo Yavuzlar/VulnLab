@@ -1035,5 +1035,41 @@
             }
             
         ]
+    },
+    {
+        "id": 13,
+        "title": {
+            "en": "API Hacking",
+            "tr": "API Zaafiyeti",
+            "fr": "Piratage de l'API",
+            "ar": ""
+        },
+        "description": {
+            "en": "API hacking simply refers to malicious attacks on the APIs of an application or a system. APIs (Application Programming Interface) are interfaces that allow software applications to communicate with each other. Many web services and applications exchange data and extend their functionality through APIs.",
+            "tr": "API hacking, kısaca bir uygulamanın veya bir sistemin API'ları üzerinden yapılan kötü niyetli saldırıları ifade eder. API'lar (Application Programming Interface), yazılım uygulamalarının birbirleriyle iletişim kurmasını sağlayan arayüzlerdir. Birçok web hizmeti ve uygulama, API'ler aracılığıyla veri alışverişi yapar ve işlevselliğini genişletir.",
+            "fr": "Le piratage d'API fait brièvement référence aux attaques malveillantes sur les API d'une application ou d'un système. Les API (Application Programming Interface) sont des interfaces qui permettent aux applications logicielles de communiquer entre elles. De nombreux services web et applications échangent des données et étendent leurs fonctionnalités par le biais d'API.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/API.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "IDOR with API Vulnerability",
+                    "tr": "API Zaafiyeti ile IDOR",
+                    "fr": "IDOR avec vulnérabilité de l'API",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Create IDOR by exploiting API Vulnerability. Manipulate the password information of User User and Admin User.",
+                    "tr": "API Zaafiyetini istismar ederek IDOR oluştur. User Kullanıcısı ile Admin Kullanıcısının password bilgisini manipüle et.",
+                    "fr": "Créer un IDOR en exploitant la vulnérabilité de l'API. Manipuler les informations de mot de passe de l'utilisateur et de l'administrateur.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/api-1",
+                "vulnID": 13
+            }
+        ]
     }
+    
 ]
