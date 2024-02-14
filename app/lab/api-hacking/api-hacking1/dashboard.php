@@ -69,11 +69,11 @@ if (!isset($_SESSION['id'])) {
     <script>
         // Fetch and display uploaded images using API
         function fetchImages() {
-            fetch('api/get_images.php')
+        fetch('api/get_images.php')
             .then(response => response.json())
             .then(data => {
                 const imageList = document.getElementById('imageList');
-                imageList.innerHTML = ""; 
+                imageList.innerHTML = "";
 
                 data.forEach(image => {
                     const col = document.createElement('div');
@@ -87,15 +87,24 @@ if (!isset($_SESSION['id'])) {
                     imgElement.alt = '<?php echo $strings['uploaded']; ?>';
                     imgElement.className = 'card-img-top';
 
+                    const cardBody = document.createElement('div');
+                    cardBody.className = 'card-body text-center';
+
+                    const fileName = document.createElement('h5');
+                    fileName.className = 'card-title';
+                    fileName.textContent = image;
+
                     const deleteButton = document.createElement('button');
-                    deleteButton.textContent = '<?php echo $strings['delete']; ?> ';
-                    deleteButton.className = 'btn btn-danger position-absolute top-50 start-50 translate-middle'; 
-                    deleteButton.onclick = function() {
+                    deleteButton.textContent = '<?php echo $strings['delete']; ?>';
+                    deleteButton.className = 'btn btn-danger position-absolute top-50 start-50 translate-middle';
+                    deleteButton.onclick = function () {
                         deleteImage(image);
                     };
 
+                    cardBody.appendChild(fileName);
                     card.appendChild(imgElement);
-                    card.appendChild(deleteButton); 
+                    card.appendChild(cardBody);
+                    card.appendChild(deleteButton);
                     col.appendChild(card);
                     imageList.appendChild(col);
                 });
@@ -161,6 +170,6 @@ if (!isset($_SESSION['id'])) {
         // Initial fetch to display uploaded images on page load
         fetchImages();
     </script>
-     <script id="VLBar" title="<?= $strings['title'] ?>" category-id="1" src="/public/assets/js/vlnav.min.js"></script>
+     <script id="VLBar" title="<?= $strings['title'] ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 </html>

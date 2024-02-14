@@ -989,8 +989,8 @@
                     "ar": ""
                 },
                 "description": {
-                    "en": "You need to find a file. Locate and delete this file.",
-                    "tr": "Using the ID of the admin user, delete the \"delete_me.jpg\" file.",
+                    "en": "Using the ID of the admin user, delete the \"delete_me.jpg\" file.",
+                    "tr": "Admin kullanıcısının id bilgisini kullanarak \"delete_me.jpg\" dosyasını siliniz.",
                     "fr": "Supprimez le fichier \"delete_me.jpg\" en utilisant l'identifiant de l'utilisateur administrateur.",
                     "ar": ""
                 },

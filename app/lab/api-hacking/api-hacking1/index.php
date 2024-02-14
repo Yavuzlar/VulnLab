@@ -90,6 +90,7 @@ if ($foundUser) {
                     </div>
                     <div class="mb-3 text-center">
                         <button type="submit" class="btn btn-primary"><?php echo $strings['login']; ?></button>
+                        <a href="api/all_wallpapers.php" class="btn btn-secondary"><?php echo $strings['allwallpapers']; ?></a>
                     </div>
                     <div class="mb-3 text-center">
                         <h4><?php echo $strings['username']; ?> user</h4>
