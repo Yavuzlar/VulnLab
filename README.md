@@ -30,6 +30,7 @@
 * Broken Authentication
 * Race Condition
 * Server Side Template Injection (SSTI)
+* API Hacking
 
 <!-- Installation -->
 ## Installation
