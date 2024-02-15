@@ -45,6 +45,7 @@ if (!isset($_SESSION['id'])) {
         <h1 class="mb-4"><?php echo $strings['labtitle']; ?> </h1>
 
         <button type="button" class="btn btn-secondary mt-2" onclick="resetImages()"><?php echo $strings['resetlab'] ?></button>
+        <button type="button" class="btn btn-danger mt-2" onclick="logout()"><?php echo $strings['logout']; ?></button>
 
 
         <!-- Image Upload Form -->
@@ -165,6 +166,23 @@ if (!isset($_SESSION['id'])) {
                 })
                 .catch(error => console.error('Hata:', error));
         }
+
+        function logout() {
+        fetch('api/logout.php')
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'index.php'; 
+                } else {
+                    alert('<?php echo $strings['logouterr'] ?>');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
 
 
         // Initial fetch to display uploaded images on page load
