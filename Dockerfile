@@ -5,7 +5,7 @@ LABEL Description="Web Vulnerability Lab by Yavuzlar." \
 	Usage="docker run -d -p [HOST PORT NUMBER]:80 yavuzlar/vulnlab" \
 	Version="1.0"
 
-ENV TZ=Asia/Dubai
+ENV TZ=Asia/Turkey
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt update
