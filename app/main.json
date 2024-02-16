@@ -372,6 +372,23 @@
                 },
                 "url": "/lab/idor/about/",
                 "vulnID": 3
+            },
+            {
+                "id": 7,
+                "title": {
+                    "en": "Shopping Cart",
+                    "tr": "Alışveriş Sepeti",
+                    "fr": "Panier d'achat",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Purchase products for free.",
+                    "tr": "Ürünleri ücretsiz satın alın.",
+                    "fr": "Acheter des produits gratuitement.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/shopping-cart/",
+                "vulnID": 3
             }
         ]
     },
@@ -820,6 +837,23 @@
                 },
                 "url": "/lab/insecure-deserialization/random-nick-generator/",
                 "vulnID": 9
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "JWT Attack",
+                    "tr": "JWT Saldırısı",
+                    "fr": "JWT Attaque",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Increase your authority by logging into the system and performing a JWT attack. Login information Yavuzlar->Vulnlab",
+                    "tr": "Sisteme giriş yaparak JWT saldırısı yaparak yetkinizi yükseltin. Giriş bilgileri Yavuzlar->Vulnlab",
+                    "fr": "Augmentez votre autorité en vous connectant au système et en effectuant une attaque JWT. Informations de connexion Yavuzlar->Vulnlab",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/jwt-attack/",
+                "vulnID": 9
             }
         ]
     },
@@ -872,6 +906,23 @@
                 },
                 "url": "/lab/broken-authentication/no-redirect/",
                 "vulnID": 10
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Two-Factor Authentication",
+                    "tr": "İki Faktörlü Kimlik Doğrulama",
+                    "fr": "Authentification à deux facteurs",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "A good hacker doesn't always need to see.",
+                    "tr": "İyi bir hacker'ın her zaman görmesi gerekmez.",
+                    "fr": "Un bon hacker n'a pas toujours besoin de voir.",
+                    "ar": ""
+                },
+                "url": "/lab/broken-authentication/2FA/",
+                "vulnID": 10
             }
         ]
     },
@@ -901,13 +952,35 @@
                 },
                 "description": {
                     "en": "Security measures say that an account can be opened with an email :)",
-                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor:).",
+                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor :)",
                     "fr": "Les mesures de sécurité disent qu'un compte peut être ouvert avec un e-mail :)",
                     "ar": ""
                 },
                 "url": "/lab/race-condition/race-condition1/",
                 "vulnID": 11
+
+                
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Discount Code Application in Shopping Cart",
+                    "tr": "Alışveriş Sepeti İçinde İndirim Kodu Uygulaması",
+                    "fr": "Application de code de réduction dans le panier d'achat",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "This lab demonstrates the implementation of a discount code feature in a shopping cart system. Users can enter a valid discount code during checkout to receive a discount on their total purchase amount.",
+                    "tr": "Bu laboratuvar, bir alışveriş sepeti sistemine indirim kodu özelliğinin nasıl uygulanacağını gösterir. Kullanıcılar, ödeme sırasında geçerli bir indirim kodu girebilir ve toplam satın alma tutarlarından indirim alabilirler.",
+                    "fr": "Ce laboratoire illustre la mise en œuvre d'une fonctionnalité de code de réduction dans un système de panier d'achat. Les utilisateurs peuvent saisir un code de réduction valide lors du paiement pour bénéficier d'une réduction sur le montant total de leur achat.",
+                    "ar": ""
+                },
+                "url": "/lab/race-condition/race-condition2/",
+                "vulnID": 11
+
+                
             }
+            
         ]
     },
     {
@@ -961,6 +1034,42 @@
                 "vulnID": 12
             }
             
+        ]
+    },
+
+    {
+        "id": 13,
+        "title": {
+            "en": "API Hacking",
+            "tr": "API Saldırısı",
+            "fr": "Violation de l'API",
+            "ar": ""
+        },
+        "description": {
+            "en": "API hacking is a type of attack where malicious individuals or hackers attempt to gain unauthorized access to applications or systems through an API.",
+            "tr": "API saldırısı, kötü niyetli kişilerin veya hacker'ların, bir API üzerinden uygulama veya sistemlere yetkisiz erişim elde etmeye çalıştığı bir saldırı türüdür.",
+            "fr": "L'API hacking est un type d'attaque où des individus malveillants ou des pirates informatiques tentent d'obtenir un accès non autorisé à des applications ou des systèmes via une API.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/api.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "API Documentation",
+                    "tr": "API Belgeleri",
+                    "fr": "Documentation de l'API",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Using the ID of the admin user, delete the \"delete_me.jpg\" file.",
+                    "tr": "Admin kullanıcısının id bilgisini kullanarak \"delete_me.jpg\" dosyasını siliniz.",
+                    "fr": "Supprimez le fichier \"delete_me.jpg\" en utilisant l'identifiant de l'utilisateur administrateur.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/api-hacking1/",
+                "vulnID": 13
+            }
         ]
     }
 ]
