@@ -11,7 +11,8 @@ function sendRequest($url, $data) {
 }
 
 // API endpoint'i
-$apiUrl = "http://localhost/API/api.php";
+//$apiUrl = "http://localhost:1337/lab/api-hacking/api-1/api.php";
+include "./api.php";
 
 // HTTP metodu
 $method = $_SERVER['REQUEST_METHOD'];

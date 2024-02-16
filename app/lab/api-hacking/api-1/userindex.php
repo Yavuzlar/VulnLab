@@ -17,7 +17,7 @@ $strings = tr();
         <p><?php echo $strings["welcomeSystem"] ?></p>
         <div class="update-password">
             <form action="Indexupdatepassword.php" method="GET">
-            <input type="hidden" name="username" value="test">
+            <input type="hidden" name="username" value="user">
                 <button type="submit"><?php echo $strings["updatePassword"] ?></button>
             </form>
         </div>
