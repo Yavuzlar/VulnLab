@@ -1,0 +1,1004 @@
+[
+    {
+        "id": 1,
+        "title": {
+            "en": "Cross Site Scripting (XSS)",
+            "tr": "Siteler Arası Betik Çalıştırma (XSS)",
+            "fr": "Script inter-sites (XSS)",
+            "ar": ""
+        },
+        "description": {
+            "en": "It allows client-side code to be injected into web pages viewed by other users.",
+            "tr": "Diğer kullanıcılar tarafından görüntülenen web sayfalarına istemci taraflı kodun enjekte edilmesine imkân verir.",
+            "fr": "Il permet d'injecter du code côté client dans des pages Web consultées par d'autres utilisateurs.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/xss.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Basic Reflected",
+                    "tr": "Basic Reflected",
+                    "fr": "Base Réfléchie",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find a way to trigger XSS via search bar.",
+                    "tr": "Arama çubuğu üzerinden XSS zafiyetinin nedenini bulunuz.",
+                    "fr": "Trouver un moyen de déclencher Xss via la barre de recherche.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/basic-reflected/",
+                "vulnID": 1
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Basic Stored",
+                    "tr": "Basic Stored",
+                    "fr": "Base Stockée",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find XSS vulnerability via chat. Remember that everyone can see your payload.",
+                    "tr": "Chati kullanarak stored XSS zafiyetini bul. Unutma sitedeki herkes XSS payloadını görebilir.",
+                    "fr": "Trouver la vulnérabilité Xss via le chat. N'oubliez pas que tout le monde peut voir votre Payload.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/basic-stored/",
+                "vulnID": 1
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Basic Dom-Based",
+                    "tr": "Basic Dom-Based",
+                    "fr": "Eval basé sur le DOM",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find XSS vulnerability.",
+                    "tr": "XSS zafiyetini bulnuz.",
+                    "fr": "Trouver la vulnérabilité via Xss.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/basic-dom-based/",
+                "vulnID": 1
+            },
+            {
+                "id": 4,
+                "title": {
+                    "en": "HTML Attribute Manipulation",
+                    "tr": "HTML Özellik Manipülasyonu",
+                    "fr": "HTML Attribut Manipulation",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find XSS vulnerability via href.",
+                    "tr": "Href üzerinden XSS'i bulunuz.",
+                    "fr": "Trouver la vulnérabilité Xss href.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/html-attribute-manipulation/",
+                "vulnID": 1
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "Welcome to Our Gallery",
+                    "tr": "Galerimize Hoş Geldiniz",
+                    "fr": "Bienvenue dans notre galerie",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find XSS vulnerability via images.",
+                    "tr": "Resimler üzerinden XSS zafiyetini bulunuz.",
+                    "fr": "Trouver la vulnérabilité Xss via les images.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/our-gallery/",
+                "vulnID": 1
+            },
+            {
+                "id": 6,
+                "title": {
+                    "en": "User Agent",
+                    "tr": "User Agent",
+                    "fr": "User Agent",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Admin logs your User-Agent data. Send a payload that only admin can see.",
+                    "tr": "Admin User Agent bilgilerini depoluyor. Attığın payloadı adminin görmesini sağla.",
+                    "fr": "L'administrateur enregistre vos données d'agent utilisateur. Envoyer un payload que l'administrateur peut voir.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/user-agent/",
+                "vulnID": 1
+            },
+            {
+                "id": 7,
+                "title": {
+                    "en": "News",
+                    "tr": "Haberler",
+                    "fr": "İnformations",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "You can share News with all users if you like.",
+                    "tr": "Bu sitede herkes hoşlarına giden haberleri paylaşabilir.",
+                    "fr": "Vous pouvez partagez des info avec tous les utilisateurs si vous voulez.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/news/",
+                "vulnID": 1
+            },{
+                "id": 8,
+                "title": {
+                    "en": "File Upload",
+                    "tr": "Dosya Yükleme",
+                    "fr": "téléchargement de fichiers",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find a way to trigger XSS via uploaded file.",
+                    "tr": "Yüklediğin dosya üzerinden XSS zafiyetini tetikleyin.",
+                    "fr": "Trouvez un moyen de déclencher XSS via un fichier téléchargé.",
+                    "ar": ""
+                },
+                "url": "/lab/xss/image-upload/",
+                "vulnID": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": {
+            "en": "SQL Injection",
+            "tr": "SQL Enjeksiyonu",
+            "fr": "Injection SQL",
+            "ar": ""
+        },
+        "description": {
+            "en": "It is an attack technique used to attack database-based applications; where the attacker takes advantage of SQL language features and adds new SQL statements to the corresponding field on the standard application screen.",
+            "tr": "Veri tabanına dayalı uygulamalara saldırmak için kullanılan bir atak tekniğidir; burada saldırgan SQL dili özelliklerinden faydalanarak standart uygulama ekranındaki ilgili alana yeni SQL ifadelerini ekler.",
+            "fr": "Il s'agit d'une technique d'attaque utilisée pour attaquer les applications basées sur des bases de données ; où l'attaquant tire parti des fonctionnalités du langage SQL et ajoute de nouvelles instructions SQL au champ correspondant sur l'écran standard de l'application.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/sqli.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Login",
+                    "tr": "Giriş Yap",
+                    "fr": "Connection",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Try to login to the system.",
+                    "tr": "Sisteme giriş yapmayı deneyiniz.",
+                    "fr": "Essayez de vous connecter au système.",
+                    "ar": ""
+                },
+                "url": "/lab/sql-injection/post-login/",
+                "vulnID": 2
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Find the Passwords",
+                    "tr": "Şifreleri Bul",
+                    "fr": "Rechercher un enregistrement",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Access the passwords in the Database.",
+                    "tr": "Veri Tabanında bulunan şifrelere erişiniz.",
+                    "fr": "Accéder aux enregistrements de la base de données",
+                    "ar": ""
+                },
+                "url": "/lab/sql-injection/find-password/",
+                "vulnID": 2
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Boolean-Based Blind SQL Injection",
+                    "tr": "Boolean-Based Blind SQL Injection",
+                    "fr": "Injection aveugle à base booléenne",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Use brute force to guess existing database records.",
+                    "tr": "Mevcut veritabanı kayıtlarını tahmin etmek için kaba kuvvet kullanınız.",
+                    "fr": "Utiliser la force brute pour deviner les enregistrements de base de données existants.",
+                    "ar": ""
+                },
+                "url": "/lab/sql-injection/post-blind-boolean/",
+                "vulnID": 2
+            },
+            {
+                "id": 4,
+                "title": {
+                    "en": "Error-Based Blind SQL Injection",
+                    "tr": "Error-Based Blind SQL Injection",
+                    "fr": "Injection SQL aveugle basée sur des erreurs",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Use SQL injection to find existing database records.",
+                    "tr": "Mevcut veritabanı kayıtlarını bulmak için SQL injection zafiyetini sömürünüz.",
+                    "fr": "Utilisez l'injection SQL pour rechercher des enregistrements de base de données existants.",
+                    "ar": ""
+                },
+                "url": "/lab/sql-injection/get-blind-error/",
+                "vulnID": 2
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "Time-Based Blind SQL Injection",
+                    "tr": "Time-Based Blind SQL Injection",
+                    "fr": "Injection aveugle basée sur le temps",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Injecting a time delay to find SQL injection.",
+                    "tr": "Mevcut veritabanı kayıtlarını tahmin etmek için kaba kuvvet kullanınız.",
+                    "fr": "Injecter une temporisation",
+                    "ar": ""
+                },
+                "url": "/lab/sql-injection/post-blind-time/",
+                "vulnID": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": {
+            "en": "Insecure Direct Object Reference (IDOR)",
+            "tr": "Güvenli Olmayan Doğrudan Nesne Referansı (IDOR)",
+            "fr": "Référence d'objet direct non sécurisée (IDOR)",
+            "ar": ""
+        },
+        "description": {
+            "en": "A type of access control vulnerability that occurs when an application uses user-supplied input to access objects directly.",
+            "tr": "Bir uygulama, nesnelere doğrudan erişmek için kullanıcı tarafından sağlanan girdiyi kullandığında ortaya çıkan bir tür erişim denetimi güvenlik açığıdır.",
+            "fr": "Type de vulnérabilité de contrôle d'accès qui se produit lorsqu'une application utilise une entrée fournie par l'utilisateur pour accéder directement aux objets.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/idor.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Invoices",
+                    "tr": "Faturalar",
+                    "fr": "Factures",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Gain unauthorized access to other users invoices.",
+                    "tr": "Başka kullanıcıların faturalarına izinsiz erişim sağlayın.",
+                    "fr": "Obtenir un accès non autorisé aux utilisateurs de facture.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/invoices/",
+                "vulnID": 3
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Ticket Sales",
+                    "tr": "Bilet Satışı",
+                    "fr": "Vente de billets",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Buy tickets for less than the regular price.",
+                    "tr": "Normal fiyatından daha ucuza bilet satın alın.",
+                    "fr": "Acheter un billet moins cher que le prix régulier.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/ticket-sales/",
+                "vulnID": 3
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Changing Password",
+                    "tr": "Parola Değiştirme",
+                    "fr": "Changer le mot de passe",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Change another users password without permission.",
+                    "tr": "Başka bir kullanıcının parolasını izinsiz değiştirin.",
+                    "fr": "Changer le mot de passe d’un autre utilisateur sans sa permission.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/changing-password/",
+                "vulnID": 3
+            },
+            {
+                "id": 4,
+                "title": {
+                    "en": "Money Transfer",
+                    "tr": "Para Transferi",
+                    "fr": "Transfer d’argent",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Transfer money from another user's account to your own account without any permission.",
+                    "tr": "Başka bir kullanıcının hesabından kendi hesabınıza izinsiz para transferi yapın.",
+                    "fr": "Transférer d’argent d’un autre compte vers votre propre compte sans aucune permission.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/money-transfer/",
+                "vulnID": 3
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "Address Entry",
+                    "tr": "Adres Girişi",
+                    "fr": "Saisie de l'adresse",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "View other users address information without any permission.",
+                    "tr": "Başka kullanıcıların adres bilgilerini izinsiz görüntüleyin.",
+                    "fr": "Voir l’addresse d’un autre utilisateur sans aucune permission.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/address-entry/",
+                "vulnID": 3
+            },
+            {
+                "id": 6,
+                "title": {
+                    "en": "About",
+                    "tr": "Hakkında",
+                    "fr": "À propos",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Change other users' profile information.",
+                    "tr": "Başka kullanıcıların profil bilgilerini değiştirin.",
+                    "fr": "Modifier les informations de profil des autres utilisateurs.",
+                    "ar": ""
+                },
+                "url": "/lab/idor/about/",
+                "vulnID": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": {
+            "en": "Command Injection",
+            "tr": "Komut Enjeksiyonu",
+            "fr": "Injection de Commande",
+            "ar": ""
+        },
+        "description": {
+            "en": "A vulnerability that involves the execution of arbitrary commands in a host operating system (OS) resulting from insufficient input validation.",
+            "tr": "Güvenlik açığı bulunan bir uygulama aracılığıyla ana bilgisayar işletim sisteminde rastgele komutların yürütülmesinin amaçlandığı bir saldırıdır. ",
+            "fr": "Une vulnérabilité qui implique l'exécution de commandes arbitraires dans un système d'exploitation hôte (OS) résultant d'une validation d'entrée insuffisante.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/command.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Send Ping 1",
+                    "tr": "Ping Gönder 1",
+                    "fr": "Envoyer le Ping 1",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find a way to exploit comand injections vulnerability via IP check.",
+                    "tr": "IP kontrolü üzerinden sistemde komut çalıştırmanın bir yolunu bul.",
+                    "fr": "Envoyer le Ping 1",
+                    "ar": ""
+                },
+                "url": "/lab/command-injection/ping-low/",
+                "vulnID": 4
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Send Ping 2",
+                    "tr": "Ping Gönder 2",
+                    "fr": "Envoyer le Ping 2",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find a way to exploit comand injections vulnerability via IP check.",
+                    "tr": "IP kontrolü üzerinden sistemde komut çalıştırmanın bir yolunu bul.",
+                    "fr": "Trouver un moyen d’exploiter la vulnérabilité injection de commande via la vérification de l’adresse İP.",
+                    "ar": ""
+                },
+                "url": "/lab/command-injection/ping-hard/",
+                "vulnID": 4
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Stock Control",
+                    "tr": "Stok Kontrol",
+                    "fr": "Contrôle du stock",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Check the products in the stock.",
+                    "tr": "Stokda bulunan ürünleri kontrol ediniz.",
+                    "fr": "Vérifier le produit dans le stock",
+                    "ar": ""
+                },
+                "url": "/lab/command-injection/stock-check/",
+                "vulnID": 4
+            },
+            {
+                "id": 4,
+                "title": {
+                    "en": "Blind Command Injection",
+                    "tr": "Blind Command Injection",
+                    "fr": "Injection de commande aveugle",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Try to exploit via HTTP Headers.",
+                    "tr": "HTTP headerlarini kullanarak makineyi sömürmeye çalış.",
+                    "fr": "Essayez d'exploiter via les en-têtes HTTP.",
+                    "ar": ""
+                },
+                "url": "/lab/command-injection/blind-command-injection/",
+                "vulnID": 4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": {
+            "en": "XML External Entity Attack (XXE)",
+            "tr": "XML Harici Varlık Saldırısı (XXE)",
+            "fr": "Attaque d'entité externe XML (XXE)",
+            "ar": ""
+        },
+        "description": {
+            "en": "It is a type of attack against an application that parses XML inputs. This attack occurs when XML input containing a reference to an external entity is processed with an incompletely structured XML parser.",
+            "tr": "XML girdilerini ayrıştıran bir uygulamaya karşı yapılan bir saldırı türüdür. Bu saldırı, harici bir varlığa referans içeren XML girdisi eksik yapılandırılmış bir XML ayrıştırıcısı ile işlendiğinde gerçekleşir. ",
+            "fr": "Il s'agit d'un type d'attaque contre une application qui analyse les entrées XML. Cette attaque se produit lorsqu'une entrée XML contenant une référence à une entité externe est traitée avec un analyseur XML incomplètement structuré.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/xxe.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "XML External File Extraction",
+                    "tr": "XML Harici Dosya çekme",
+                    "fr": "Extraction de fichiers externes XML",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Exploiting XXE using external entities to retrieve files.",
+                    "tr": "Dosyaları almak için harici varlıklar kullanarak XXE'den yararlanın.",
+                    "fr": "Exploiter XXE en utilisant des entités externes pour récupérer des fichiers.",
+                    "ar": ""
+                },
+                "url": "/lab/xxe/xml/",
+                "vulnID": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": {
+            "en": "File Inclusion",
+            "tr": "Dosya Dahil Etme",
+            "fr": "Inclusion de fichiers",
+            "ar": ""
+        },
+        "description": {
+            "en": "A vulnerability that allows an attacker to attach a remotely or locally hosted file, usually via a script on the web server.",
+            "tr": "Saldırganın, genellikle web sunucusundaki bir komut dosyası aracılığıyla, uzaktan veya yerel olarak barındırılan bir dosya eklemesine olanak tanıyan güvenlik açığıdır.",
+            "fr": "Une vulnérabilité qui permet à un attaquant de joindre un fichier hébergé à distance ou localement, généralement via un script sur le serveur Web.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/lfi.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Learn the Capital 1",
+                    "tr": "Başkent Öğrenme 1",
+                    "fr": "Savoir la Capitale 1",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Access the admin page without permission.",
+                    "tr": "Yönetici sayfasına izinsiz erişiniz.",
+                    "fr": "Accéder à la page de l’administrateur sans permission.",
+                    "ar": ""
+                },
+                "url": "/lab/file-inclusion/learn-the-capital-1/",
+                "vulnID": 6
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Learn the Capital 2",
+                    "tr": "Başkent Öğrenme 2",
+                    "fr": "Savoir la Capitale 2",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "We have taken some security measures. Let's see if you can access the admin page without permission.",
+                    "tr": "Bazı güvenlik önlemleri aldık. Bakalım yönetici sayfasına izinsiz erişebilecek misin.",
+                    "fr": "Nous avons pris quelques mesures de sécurité. Voyons si vous pouvez accéder a la page Admin sans permission.",
+                    "ar": ""
+                },
+                "url": "/lab/file-inclusion/learn-the-capital-2/",
+                "vulnID": 6
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Learn the Capital 3",
+                    "tr": "Başkent Öğrenme 3",
+                    "fr": "Savoir la Capitale 3",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "We have increased our security measures. Now it's not easy to access the admin page :)",
+                    "tr": "Güvenlik önlemlerimizi artırdık. Artık yönetici sayfasına erişmen çok da kolay değil :)",
+                    "fr": "Nous avons pris quelques mesures de sécurité. Maintenant c’est simple d’accéder a la page de l’administrateur.",
+                    "ar": ""
+                },
+                "url": "/lab/file-inclusion/learn-the-capital-3/",
+                "vulnID": 6
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": {
+            "en": "Unrestricted File Upload",
+            "tr": "Kısıtlamasız Dosya Yükleme",
+            "fr": "Téléchargement de fichiers illimité",
+            "ar": ""
+        },
+        "description": {
+            "en": "It is a security vulnerability that occurs as a result of the inability to fully control the files received from the user and may result in remote code execution on the server.",
+            "tr": "Kullanıcıdan alınan dosyaların tam olarak kontrol edilememesi sonucu ortaya çıkan ve sunucu üzerinde uzaktan kod çalıştırma ile sonuçlanabilecek bir güvenlik açığıdır.",
+            "fr": "Il s'agit d'une vulnérabilité de sécurité qui se produit en raison de l'incapacité de contrôler entièrement les fichiers reçus de l'utilisateur et peut entraîner l'exécution de code à distance sur le serveur.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/upload.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Unrestricted",
+                    "tr": "Kısıtlamasız",
+                    "fr": "İllimité",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Upload disallowed file type.",
+                    "tr": "İzin verilmeyen dosya türü yükleyin.",
+                    "fr": "Télécharger un type de fichier non autorisé.",
+                    "ar": ""
+                },
+                "url": "/lab/file-upload/unrestricted/",
+                "vulnID": 7
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "MIME Type",
+                    "tr": "MIME Tipi",
+                    "fr": "Type MIME",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Upload disallowed file type, bypassing MIME type checking.",
+                    "tr": "MIME tip kontrolünü atlayarak, izin verilmeyen dosya türü yükleyin.",
+                    "fr": "Télécharger un type de fichier non autorisé, en contournant la vérification magique de l'en-tête.",
+                    "ar": ""
+                },
+                "url": "/lab/file-upload/mime-type/",
+                "vulnID": 7
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Magic Header",
+                    "tr": "Magic Header",
+                    "fr": "En-tête magique",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Upload disallowed file type, bypassing the magic header check.",
+                    "tr": "Magic Header kontrolünü atlayarak, izin verilmeyen dosya türü yükleyin.",
+                    "fr": "Téléchargez un type de fichier non autorisé, en contournant la vérification magique de l'en-tête.",
+                    "ar": ""
+                },
+                "url": "/lab/file-upload/magic-header/",
+                "vulnID": 7
+            },
+            {
+                "id": 4,
+                "title": {
+                    "en": "Blacklist 1",
+                    "tr": "Kara Liste 1",
+                    "fr": "Liste noire 1",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Upload disallowed file type, bypassing the blacklist check.",
+                    "tr": "Kara liste kontrolünü atlayarak, izin verilmeyen dosya türü yükleyin.",
+                    "fr": "Télécharger un type de fichier non autorisé, en contournant la magie de la vérification de la liste noire.",
+                    "ar": ""
+                },
+                "url": "/lab/file-upload/blacklist-1/",
+                "vulnID": 7
+            },
+            {
+                "id": 5,
+                "title": {
+                    "en": "Blacklist 2 ",
+                    "tr": "Kara Liste 2",
+                    "fr": "Liste noire 2",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Upload disallowed file type, bypassing the blacklist check.",
+                    "tr": "Kara liste kontrolünü atlayarak, izin verilmeyen dosya türü yükleyin.",
+                    "fr": "Télécharger un type de fichier non autorisé, en contournant la magie de la vérification de la liste noire.",
+                    "ar": ""
+                },
+                "url": "/lab/file-upload/blacklist-2/",
+                "vulnID": 7
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": {
+            "en": "Cross Site Request Forgery (CSRF)",
+            "tr": "Siteler Arası İstek Sahteciliği (CSRF)",
+            "fr": "Contrefaçon de demande intersites (CSRF)",
+            "ar": ""
+        },
+        "description": {
+            "en": "Is an attack vector that tricks a web browser into executing an unwanted action in an application to which a user is logged in.",
+            "tr": "Bir web tarayıcısını, kullanıcının oturum açtığı bir uygulamada istenmeyen bir eylemi yürütmesi için kandıran bir saldırı vektörüdür.",
+            "fr": "Est un vecteur d'attaque qui incite un navigateur Web à exécuter une action indésirable dans une application à laquelle un utilisateur est connecté.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/csrf.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Changing Password",
+                    "tr": "Parola Değiştirme",
+                    "fr": "Changer le mot de passe",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Change the password of the admin account without permission.",
+                    "tr": "Admin hesabının parolasını izinsiz değiştirin.",
+                    "fr": "Changer le mot de passe du compte de l’administrateur sans permission",
+                    "ar": ""
+                },
+                "url": "/lab/csrf/changing-password/",
+                "vulnID": 8
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Money Transfer",
+                    "tr": "Para Transferi",
+                    "fr": "Transfère d’Argent",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Transfer money from admin account to user account without permission.",
+                    "tr": "Admin hesabından user hesabına izinsiz para transferi yapın.",
+                    "fr": "Transférer d’argent du compte de l’administrateur au compte de l’utilisateur sans permission",
+                    "ar": ""
+                },
+                "url": "/lab/csrf/money-transfer/",
+                "vulnID": 8
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Follow",
+                    "tr": "Perform unauthorized following from the admin account.",
+                    "fr": "Suivre",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Takip Et",
+                    "tr": "Admin hesabından izinsiz takip etme işlemi gerçekleştirin.",
+                    "fr": "Effectuer un suivi non autorisé à partir du compte administrateur",
+                    "ar": ""
+                },
+                "url": "/lab/csrf/follow/",
+                "vulnID": 8
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": {
+            "en": "Insecure Deserialization",
+            "tr": "Güvensiz Serileştirme",
+            "fr": "Désérialisation non sécurisée",
+            "ar": ""
+        },
+        "description": {
+            "en": "Insecure deserialization is a vulnerability which occurs when user-controllable untrusted data is deserialized by a website without sanitize.Vulnerability cause to gain priviliges may even remote code execution.",
+            "tr": "Güvensiz serileştirme,bir websitesinin kullanıcının manipüle edebileceği bir veriyi kontrol etmeden serileştirip kullanması sonucunda saldırganın web sitesi üzerinde yetkisiz haklar kazanmaya hatta uzaktan erişimine bile sebebiyet verebilicek bir güvenlik açığıdır.",
+            "fr": "La désérialisation non sécurisée est une vulnérabilité qui se produit lorsque des données non fiables contrôlables par l'utilisateur sont désérialisées par un site Web sans assainissement. La cause de la vulnérabilité pour obtenir des privilèges peut même entraîner l'exécution de code à distance.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/insecure.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Admin Account 1",
+                    "tr": "Yönetici Hesabı 1",
+                    "fr": "Compte de l’administrateur 1",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Gain unauthorized acces to admin account. Default Credentials = test:test",
+                    "tr": "Admin hesabına erişim sağlamayı deneyiniz. Varsayılan giriş bilgileri = test:test",
+                    "fr": "Gagner un accès non autorisé au compte de l’administrateur. Identifiants par défaut=test:test",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/admin-account-1/",
+                "vulnID": 9
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Admin Account 2",
+                    "tr": "Yönetici Hesabı 2",
+                    "fr": "Compte de l’administrateur 2",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Gain unauthorized acces to admin account. Default Credentials = test:test",
+                    "tr": "Admin hesabına ulaşmaya tekrar deneyiniz , doğru admin hesabında olduğundan emin olunuz. Varsayılan giriş bilgileri = test:test",
+                    "fr": "Gagner un accès non autorisé au compte de l’administrateur. Identifiants par défaut=test:test",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/admin-account-2/",
+                "vulnID": 9
+            },
+            {
+                "id": 3,
+                "title": {
+                    "en": "Full Priviliges",
+                    "tr": "Full Yetki",
+                    "fr": "Tous les privilèges",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Gain unauthorized acces to add,delete,update operations. Default Credentials = test:test",
+                    "tr": "Sistem üzerinden ekleme,çıkarma,silme yetkilerine erişiniz. Varsayılan giriş bilgileri = test:test",
+                    "fr": "Gagner un accès non autorisé pour ajouter, supprimer, mettre à jour. Identifiants par défaut=test:test",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/full-privileges/",
+                "vulnID": 9
+            },
+            {
+                "id": 4,
+                "title": {
+                    "en": "Random Nick Generator",
+                    "tr": "Rastgele İsim Üreticisi",
+                    "fr": "Générateur de Nick aléatoire",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Gain unauthorized acces to SYSTEM! Default Credentials = test:test",
+                    "tr": "Sisteme erişim sağlayınız. Varsayılan giriş bilgileri = test:test",
+                    "fr": "Gagner un accès non autorisé au System. Identifiants par défaut=test:test",
+                    "ar": ""
+                },
+                "url": "/lab/insecure-deserialization/random-nick-generator/",
+                "vulnID": 9
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": {
+            "en": "Broken Authentication",
+            "tr": "Bozuk Kimlik Doğrulama",
+            "fr": "Authentification brisée",
+            "ar": ""
+        },
+        "description": {
+            "en": "Broken authentication refers to the vulnerabilities or weaknesses inherent in an online platform or application that allows hackers to bypass the login security and gain access to all the privileges owned by the hacked user.",
+            "tr": "Bozuk kimlik doğrulama, bilgisayar korsanlarının oturum açma güvenliğini atlamasına ve saldırıya uğramış kullanıcının sahip olduğu tüm ayrıcalıklara erişmesine olanak tanıyan bir çevrimiçi platform veya uygulamada bulunan güvenlik açıkları veya zayıflıkları ifade eder.",
+            "fr": "L'authentification brisée fait référence aux vulnérabilités ou faiblesses inhérentes à une plate-forme ou à une application en ligne qui permettent aux pirates de contourner la sécurité de connexion et d'accéder à tous les privilèges détenus par l'utilisateur piraté.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/broken.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Brute Force",
+                    "tr": "Kaba Kuvvet Saldırısı",
+                    "fr": "Force Brute",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Find the password of the admin.",
+                    "tr": "Admin'e ait parolayı bulunuz.",
+                    "fr": "Trouver le mot de passe de l’administrateur.",
+                    "ar": ""
+                },
+                "url": "/lab/broken-authentication/brute-force/",
+                "vulnID": 10
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "No Redirect",
+                    "tr": "No Redirect",
+                    "fr": "Pas de redirection",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Developers forgot to add exit function when redirecting. Good luck!",
+                    "tr": "Siteyi geliştirenler yönlendirme yaparken exit fonksiyonunu yazmayı unutmuş. İyi Şanslar.",
+                    "fr": "Les développeurs ont oublié d'ajouter la fonction de sortie lors de la redirection. Bonne chance!",
+                    "ar": ""
+                },
+                "url": "/lab/broken-authentication/no-redirect/",
+                "vulnID": 10
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": {
+            "en": "Race Condition",
+            "tr": "Yarış Durumu",
+            "fr": "Situation de compétition",
+            "ar": ""
+        },
+        "description": {
+            "en": "Race condition refers to a situation that can prevent a program from working correctly and cause security vulnerabilities. This occurs when two or more processes attempt to access the same resources at the same time, where this access occurs in a sequential or uncontrolled manner, which may result in unexpected errors or vulnerabilities.",
+            "tr": "Yarış Durumu, bir programın doğru çalışmasını engelleyebilecek ve güvenlik zafiyetlerine yol açabilen bir durumu ifade eder. Bu durum, iki veya daha fazla işlemin aynı kaynaklara aynı anda erişmeye çalıştığı, bu erişimin sıralı veya kontrolsüz bir şekilde gerçekleştiği durumlarda ortaya çıkar, ve bu durumda beklenmeyen hatalar veya güvenlik açıkları meydana gelebilir.",
+            "fr": "Situation de compétition fait référence à une situation qui peut empêcher un programme de fonctionner correctement et provoquer des failles de sécurité. Cela se produit lorsque deux processus ou plus tentent d'accéder aux mêmes ressources en même temps, et que cet accès se produit de manière séquentielle ou incontrôlée, ce qui peut entraîner des erreurs inattendues ou des vulnérabilités.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/race.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Race Condition in the registration form",
+                    "tr": "Kayıt formunda oluşan Yarış Koşulu",
+                    "fr": "Condition de course dans le formulaire d'inscription",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Security measures say that an account can be opened with an email :)",
+                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor:).",
+                    "fr": "Les mesures de sécurité disent qu'un compte peut être ouvert avec un e-mail :)",
+                    "ar": ""
+                },
+                "url": "/lab/race-condition/race-condition1/",
+                "vulnID": 11
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": {
+            "en": "Server Side Template Injection (SSTI)",
+            "tr": "Sunucu Tarafı Şablon Enjeksiyonu (SSTI)",
+            "fr": "Injection de modèle côté serveur (SSTI)",
+            "ar": ""
+        },
+        "description": {
+            "en": "Server-Side Template Injection (SSTI) is one of the vulnerabilities in web applications. This vulnerability could allow the malware to infect the server-side template engine and corrupt unwanted code by filling in the malware's lifetime throughout user input. These types of attacks manipulate the code inside the application, allowing sensitive information to be leaked or unwanted operations to occur on the system.",
+            "tr": "Sunucu Tarafı Şablon Enjeksiyonu (SSTI), web uygulamalarındaki güvenlik açıklarından biridir. Bu açık, saldırganın kötü niyetli şablon ifadelerini kullanıcı girişleri aracılığıyla enjekte ederek, sunucu tarafında şablon motorunu etkilemesine ve istenmeyen kodun yürütülmesine neden olabilir. Bu tür saldırılar, uygulama içindeki kodu manipüle ederek hassas bilgilerin sızdırılmasına veya sistem üzerinde istenmeyen eylemlerin gerçekleştirilmesine olanak tanır.",
+            "fr": "L'injection de modèles côté serveur (SSTI) est l'une des vulnérabilités des applications Web. Cette vulnérabilité pourrait permettre à un attaquant d'injecter des expressions de modèle malveillantes via la saisie de l'utilisateur, affectant le moteur de modèle côté serveur et provoquant l'exécution de code indésirable. Ces types d'attaques manipulent le code au sein de l'application, permettant la fuite d'informations sensibles ou l'exécution d'actions indésirables sur le système.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/ssti.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "SSTI-Basic",
+                    "tr": "SSTI-Basic",
+                    "fr": "SSTI-Basic",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Prove that you are a hacker when you introduce yourself.",
+                    "tr": "Kendinizi tanıtırken bir hacker olduğunuzu kanıtlayın.",
+                    "fr": "Prouvez que vous êtes un hacker lorsque vous vous présentez.",
+                    "ar": ""
+                },
+                "url": "/lab/ssti/SSTI-Basic/",
+                "vulnID": 12
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "SSTI-Blacklist",
+                    "tr": "SSTI-Blacklist",
+                    "fr": "SSTI-Blacklist",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Exploit vulnerability by bypassing filter.",
+                    "tr": "Filtreyi atlatarak zafiyeti sömür.",
+                    "fr": "Exploiter la vulnérabilité en contournant le filtre",
+                    "ar": ""
+                },
+                "url": "/lab/ssti/SSTI-Blacklist/",
+                "vulnID": 12
+            }
+            
+        ]
+    },
+    {
+        "id": 13,
+        "title": {
+            "en": "Path Traversal",
+            "tr": "Yol Geçişi",
+            "fr": "Parcours De Chemin",
+            "ar": ""
+        },
+        "description": {
+            "en": "Path traversal is a type of attack used to gain unauthorized access to a computer system. This attack occurs when an application fails to properly control or restrict file paths. Attackers attempt to bypass application security by using file paths that are not normally allowed to access the file system. Path traversal attacks can be carried out through a web application or other software on a server and can expose sensitive system files, database files, or other important information. If conducted by a user without permission to access the file system, such an attack can lead to serious security vulnerabilities and data leakage.",
+            "tr": "Path traversal, bir bilgisayar sistemine yetkisiz erişim sağlamak için kullanılan bir saldırı türüdür. Bu saldırı, bir uygulamanın dosya yolunu doğru bir şekilde denetleyemediği veya kısıtlayamadığı durumlarda ortaya çıkar. Saldırganlar, dosya sistemine erişmek için normalde erişmelerine izin verilmeyen dosya yollarını kullanarak uygulama güvenlik duvarını aşmaya çalışır. Path traversal saldırıları, bir web uygulaması veya sunucu üzerindeki diğer yazılımlar aracılığıyla gerçekleştirilebilir ve hassas sistem dosyalarını, veritabanı dosyalarını veya başka önemli bilgileri açığa çıkarabilir. Bu tür bir saldırı, dosya sistemine erişim izni olmayan bir kullanıcı tarafından yapılırsa, ciddi güvenlik açıklarına ve veri sızıntısına neden olabilir.",
+            "fr": "La traversée de chemin (path traversal) est un type d'attaque utilisé pour obtenir un accès non autorisé à un système informatique. Cette attaque se produit lorsque une application ne parvient pas à contrôler ou à restreindre correctement les chemins d'accès aux fichiers. Les attaquants tentent de contourner la sécurité de l'application en utilisant des chemins d'accès aux fichiers qui ne sont normalement pas autorisés à accéder au système de fichiers. Les attaques de traversée de chemin peuvent être effectuées via une application Web ou un autre logiciel sur un serveur et peuvent exposer des fichiers système sensibles, des fichiers de base de données ou d'autres informations importantes. Si elles sont effectuées par un utilisateur sans autorisation d'accès au système de fichiers, une telle attaque peut entraîner de graves vulnérabilités de sécurité et des fuites de données.",
+            "ar": ""
+        },
+       
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Path Traversal Vulnerability in File Viewer",
+                    "tr": "Dosya Görüntüleyicide Path Traversal Açığı",
+                    "fr": "Vulnérabilité de Traversée de Chemin dans le Visualiseur de Fichiers",
+                    "ar":""
+                },
+                "description": {
+                    "en": "The file viewer application does not properly sanitize user input, allowing attackers to traverse directories and access sensitive files on the server.",
+                    "tr": "Dosya görüntüleyici uygulaması kullanıcı girişlerini doğru şekilde temizlemediğinden, saldırganların dizinler arasında dolaşmasına ve sunucudaki hassas dosyalara erişmesine olanak tanır.",
+                    "fr": "L'application de visualisation de fichiers ne nettoie pas correctement les entrées utilisateur, permettant aux attaquants de traverser les répertoires et d'accéder à des fichiers sensibles sur le serveur.",
+                    "ar": ""
+                },
+                "url": "/lab/path-traversal/pathtraversal/",
+                "vulnID": 13
+            }
+        ]
+    }
+    
+    
+
+]
