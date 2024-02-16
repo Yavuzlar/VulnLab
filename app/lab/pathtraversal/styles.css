@@ -28,12 +28,12 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.product img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
 }
 
 .product h2 {
@@ -49,6 +49,8 @@ h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .product button:hover {
