@@ -966,6 +966,41 @@
     {
         "id": 13,
         "title": {
+            "en": "API Hacking",
+            "tr": "API Saldırısı",
+            "fr": "Violation de l'API",
+            "ar": ""
+        },
+        "description": {
+            "en": "API hacking is a type of attack where malicious individuals or hackers attempt to gain unauthorized access to applications or systems through an API.",
+            "tr": "API saldırısı, kötü niyetli kişilerin veya hacker'ların, bir API üzerinden uygulama veya sistemlere yetkisiz erişim elde etmeye çalıştığı bir saldırı türüdür.",
+            "fr": "L'API hacking est un type d'attaque où des individus malveillants ou des pirates informatiques tentent d'obtenir un accès non autorisé à des applications ou des systèmes via une API.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/api.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "API Documentation",
+                    "tr": "API Belgeleri",
+                    "fr": "Documentation de l'API",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Using the ID of the admin user, delete the \"delete_me.jpg\" file.",
+                    "tr": "Admin kullanıcısının id bilgisini kullanarak \"delete_me.jpg\" dosyasını siliniz.",
+                    "fr": "Supprimez le fichier \"delete_me.jpg\" en utilisant l'identifiant de l'utilisateur administrateur.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/api-hacking1/",
+                "vulnID": 13
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": {
             "en": "Path Traversal",
             "tr": "Yol Geçişi",
             "fr": "Parcours De Chemin",
@@ -994,7 +1029,7 @@
                     "ar": ""
                 },
                 "url": "/lab/path-traversal/pathtraversal/",
-                "vulnID": 13
+                "vulnID": 14
             }
         ]
     }
