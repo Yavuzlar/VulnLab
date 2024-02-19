@@ -1028,7 +1028,7 @@
                     "fr": "L'application de visualisation de fichiers ne nettoie pas correctement les entrées utilisateur, permettant aux attaquants de traverser les répertoires et d'accéder à des fichiers sensibles sur le serveur.",
                     "ar": ""
                 },
-                "url": "/lab/path-traversal/pathtraversal/",
+                "url": "/lab/pathtraversal/pathtraversal-1/",
                 "vulnID": 14
             }
         ]
