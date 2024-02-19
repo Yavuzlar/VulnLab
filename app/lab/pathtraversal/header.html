@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="page-title">En Popüler Hacker Grupları</h1>
+
+</header>
+
+<script>
+    function changeLanguage() {
+        var languageSelect = document.getElementById('language');
+        var selectedLanguage = languageSelect.options[languageSelect.selectedIndex].value;
+
+        if (selectedLanguage === 'tr') {
+            document.getElementById('page-title').innerText = 'En Popüler Hacker Grupları';
+        } else {
+            document.getElementById('page-title').innerText = 'Most Popular Hacker Groups';
+        }
+    }
+
+</script>
+
+</body>
+</html>
