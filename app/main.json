@@ -372,23 +372,6 @@
                 },
                 "url": "/lab/idor/about/",
                 "vulnID": 3
-            },
-            {
-                "id": 7,
-                "title": {
-                    "en": "Shopping Cart",
-                    "tr": "Alışveriş Sepeti",
-                    "fr": "Panier d'achat",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "Purchase products for free.",
-                    "tr": "Ürünleri ücretsiz satın alın.",
-                    "fr": "Acheter des produits gratuitement.",
-                    "ar": ""
-                },
-                "url": "/lab/idor/shopping-cart/",
-                "vulnID": 3
             }
         ]
     },
@@ -837,23 +820,6 @@
                 },
                 "url": "/lab/insecure-deserialization/random-nick-generator/",
                 "vulnID": 9
-            },
-            {
-                "id": 5,
-                "title": {
-                    "en": "JWT Attack",
-                    "tr": "JWT Saldırısı",
-                    "fr": "JWT Attaque",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "Increase your authority by logging into the system and performing a JWT attack. Login information Yavuzlar->Vulnlab",
-                    "tr": "Sisteme giriş yaparak JWT saldırısı yaparak yetkinizi yükseltin. Giriş bilgileri Yavuzlar->Vulnlab",
-                    "fr": "Augmentez votre autorité en vous connectant au système et en effectuant une attaque JWT. Informations de connexion Yavuzlar->Vulnlab",
-                    "ar": ""
-                },
-                "url": "/lab/insecure-deserialization/jwt-attack/",
-                "vulnID": 9
             }
         ]
     },
@@ -906,23 +872,6 @@
                 },
                 "url": "/lab/broken-authentication/no-redirect/",
                 "vulnID": 10
-            },
-            {
-                "id": 3,
-                "title": {
-                    "en": "Two-Factor Authentication",
-                    "tr": "İki Faktörlü Kimlik Doğrulama",
-                    "fr": "Authentification à deux facteurs",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "A good hacker doesn't always need to see.",
-                    "tr": "İyi bir hacker'ın her zaman görmesi gerekmez.",
-                    "fr": "Un bon hacker n'a pas toujours besoin de voir.",
-                    "ar": ""
-                },
-                "url": "/lab/broken-authentication/2FA/",
-                "vulnID": 10
             }
         ]
     },
@@ -952,35 +901,13 @@
                 },
                 "description": {
                     "en": "Security measures say that an account can be opened with an email :)",
-                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor :)",
+                    "tr": "Güvenlik önlemleri bir e-posta ile bir hesap açılabileceğini söylüyor:).",
                     "fr": "Les mesures de sécurité disent qu'un compte peut être ouvert avec un e-mail :)",
                     "ar": ""
                 },
                 "url": "/lab/race-condition/race-condition1/",
                 "vulnID": 11
-
-                
-            },
-            {
-                "id": 2,
-                "title": {
-                    "en": "Discount Code Application in Shopping Cart",
-                    "tr": "Alışveriş Sepeti İçinde İndirim Kodu Uygulaması",
-                    "fr": "Application de code de réduction dans le panier d'achat",
-                    "ar": ""
-                },
-                "description": {
-                    "en": "This lab demonstrates the implementation of a discount code feature in a shopping cart system. Users can enter a valid discount code during checkout to receive a discount on their total purchase amount.",
-                    "tr": "Bu laboratuvar, bir alışveriş sepeti sistemine indirim kodu özelliğinin nasıl uygulanacağını gösterir. Kullanıcılar, ödeme sırasında geçerli bir indirim kodu girebilir ve toplam satın alma tutarlarından indirim alabilirler.",
-                    "fr": "Ce laboratoire illustre la mise en œuvre d'une fonctionnalité de code de réduction dans un système de panier d'achat. Les utilisateurs peuvent saisir un code de réduction valide lors du paiement pour bénéficier d'une réduction sur le montant total de leur achat.",
-                    "ar": ""
-                },
-                "url": "/lab/race-condition/race-condition2/",
-                "vulnID": 11
-
-                
             }
-            
         ]
     },
     {
@@ -1036,7 +963,6 @@
             
         ]
     },
-
     {
         "id": 13,
         "title": {
@@ -1071,5 +997,43 @@
                 "vulnID": 13
             }
         ]
+    },
+    {
+        "id": 14,
+        "title": {
+            "en": "Path Traversal",
+            "tr": "Yol Geçişi",
+            "fr": "Parcours De Chemin",
+            "ar": ""
+        },
+        "description": {
+            "en": "Path traversal is a type of attack used to gain unauthorized access to a computer system. This attack occurs when an application fails to properly control or restrict file paths. Attackers attempt to bypass application security by using file paths that are not normally allowed to access the file system. Path traversal attacks can be carried out through a web application or other software on a server and can expose sensitive system files, database files, or other important information. If conducted by a user without permission to access the file system, such an attack can lead to serious security vulnerabilities and data leakage.",
+            "tr": "Path traversal, bir bilgisayar sistemine yetkisiz erişim sağlamak için kullanılan bir saldırı türüdür. Bu saldırı, bir uygulamanın dosya yolunu doğru bir şekilde denetleyemediği veya kısıtlayamadığı durumlarda ortaya çıkar. Saldırganlar, dosya sistemine erişmek için normalde erişmelerine izin verilmeyen dosya yollarını kullanarak uygulama güvenlik duvarını aşmaya çalışır. Path traversal saldırıları, bir web uygulaması veya sunucu üzerindeki diğer yazılımlar aracılığıyla gerçekleştirilebilir ve hassas sistem dosyalarını, veritabanı dosyalarını veya başka önemli bilgileri açığa çıkarabilir. Bu tür bir saldırı, dosya sistemine erişim izni olmayan bir kullanıcı tarafından yapılırsa, ciddi güvenlik açıklarına ve veri sızıntısına neden olabilir.",
+            "fr": "La traversée de chemin (path traversal) est un type d'attaque utilisé pour obtenir un accès non autorisé à un système informatique. Cette attaque se produit lorsque une application ne parvient pas à contrôler ou à restreindre correctement les chemins d'accès aux fichiers. Les attaquants tentent de contourner la sécurité de l'application en utilisant des chemins d'accès aux fichiers qui ne sont normalement pas autorisés à accéder au système de fichiers. Les attaques de traversée de chemin peuvent être effectuées via une application Web ou un autre logiciel sur un serveur et peuvent exposer des fichiers système sensibles, des fichiers de base de données ou d'autres informations importantes. Si elles sont effectuées par un utilisateur sans autorisation d'accès au système de fichiers, une telle attaque peut entraîner de graves vulnérabilités de sécurité et des fuites de données.",
+            "ar": ""
+        },
+       
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Path Traversal Vulnerability in File Viewer",
+                    "tr": "Dosya Görüntüleyicide Path Traversal Açığı",
+                    "fr": "Vulnérabilité de Traversée de Chemin dans le Visualiseur de Fichiers",
+                    "ar":""
+                },
+                "description": {
+                    "en": "The file viewer application does not properly sanitize user input, allowing attackers to traverse directories and access sensitive files on the server.",
+                    "tr": "Dosya görüntüleyici uygulaması kullanıcı girişlerini doğru şekilde temizlemediğinden, saldırganların dizinler arasında dolaşmasına ve sunucudaki hassas dosyalara erişmesine olanak tanır.",
+                    "fr": "L'application de visualisation de fichiers ne nettoie pas correctement les entrées utilisateur, permettant aux attaquants de traverser les répertoires et d'accéder à des fichiers sensibles sur le serveur.",
+                    "ar": ""
+                },
+                "url": "/lab/pathtraversal/pathtraversal-1/",
+                "vulnID": 14
+            }
+        ]
     }
+    
+    
+
 ]
