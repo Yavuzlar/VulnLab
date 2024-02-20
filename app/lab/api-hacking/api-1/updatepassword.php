@@ -19,8 +19,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 // Kullanıcı güncelleme (PATCH)
 if ($method === 'POST') {
-    $username = $_POST['username'];
-    $newPassword = $_POST['newpassword'];
+    $username = $_GET['username'];
+    $newPassword = $_GET['newpassword'];
 
     // API'ye gönderilecek veriler
     $data = array(
@@ -34,4 +34,4 @@ if ($method === 'POST') {
     // API'den gelen yanıtı ekrana yazdır
     echo $response;
 }
-?>
+

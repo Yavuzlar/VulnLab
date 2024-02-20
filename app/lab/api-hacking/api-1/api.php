@@ -21,6 +21,8 @@ if ($method === 'GET') {
     }
 }
 
+
+
 // POST
 if ($method === 'POST') {
     parse_str(file_get_contents("php://input"), $data);
@@ -37,7 +39,7 @@ if ($method === 'POST') {
     }
     if ($userFound) {
         writeData($users);
-        echo "Şifre başarıyla güncellendi.";
+        header("Location: userFound.php");
     } else {
         echo "Kullanıcı bulunamadı. Kullanıcı adı: $username";
     }
@@ -63,4 +65,3 @@ if ($method === 'DELETE') {
         echo "Kullanıcı bulunamadı. Kullanıcı adı: $username";
     }
 }
-?>
