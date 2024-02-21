@@ -17,6 +17,7 @@ RUN apt-get install -y \
 	php-cgi \
 	php-cli \
 	php-common \
+	php-gd 	\
 	php-curl \
 	php-dev \
 	php-json \

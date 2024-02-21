@@ -1036,7 +1036,6 @@
             
         ]
     },
-
     {
         "id": 13,
         "title": {
@@ -1069,6 +1068,41 @@
                 },
                 "url": "/lab/api-hacking/api-hacking1/",
                 "vulnID": 13
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": {
+            "en": "Captcha Bypass",
+            "tr": "Captcha Bypass",
+            "fr": "Captcha Bypass",
+            "ar": ""
+        },
+        "description": {
+            "en": "CAPTCHA bypass methods are techniques developed to circumvent security measures on websites. These methods typically aim to exploit computer programming and artificial intelligence techniques to allow non-human automated bots to solve or bypass CAPTCHA challenges. This facilitates activities such as spam submissions, account creation bots, and other automated malicious activities. However, such methods are considered unethical and illegal, and are constantly monitored by website owners for detection and mitigation.",
+            "tr": "CAPTCHA bypass, web sitelerindeki güvenlik önlemlerini aşmak amacıyla geliştirilen yöntemlerdir. Bu yöntemler, genellikle bilgisayar programlama ve yapay zeka tekniklerinin karmaşık kombinasyonlarını kullanarak, insan olmayan otomatik botların CAPTCHA'yı çözmesini veya geçmesini sağlar. Bu sayede, spam gönderimleri, hesap oluşturma botları ve diğer otomatik kötü niyetli faaliyetlerin gerçekleştirilmesi amaçlanır. Ancak, bu tür yöntemler etik dışı ve yasa dışı kabul edilir ve web sitesi sahipleri tarafından tespit edilerek önlem alınması için sürekli olarak izlenirler.",
+            "fr": "Les méthodes de contournement de CAPTCHA sont des techniques développées pour contourner les mesures de sécurité sur les sites Web. Ces méthodes visent généralement à exploiter la programmation informatique et les techniques d'intelligence artificielle pour permettre aux robots automatisés non humains de résoudre ou de contourner les défis CAPTCHA. Cela facilite des activités telles que les soumissions de spam, les robots de création de compte et d'autres activités malveillantes automatisées. Cependant, de telles méthodes sont considérées comme contraires à l'éthique et illégales, et sont constamment surveillées par les propriétaires de sites Web pour la détection et l'atténuation.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/captcha.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Captcha Bypass",
+                    "tr": "Captcha Bypass",
+                    "fr": "Captcha Bypass",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Get rid of CAPTCHA with the help of ROBOTS! Remember, CAPTCHA is constantly being refreshed.",
+                    "tr": "ROBOTlardan yardım alarak Captchadan kurtulun! Unutmayın, captcha sürekli yenileniyor:)",
+                    "fr": "Débarrassez-vous de CAPTCHA avec l'aide des ROBOTS! N'oubliez pas, CAPTCHA est constamment rafraîchi.",
+                    "ar": ""
+                },
+                "url": "/lab/captcha-bypass/bypass1",
+                "vulnID": 14
             }
         ]
     }
