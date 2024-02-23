@@ -9,11 +9,30 @@ $strings = tr();
 session_start();
 
 $message = '';
-$httpStatus = 200; 
+$httpStatus = 200;
 
-if (!isset($_SESSION['num1'], $_SESSION['num2']) || empty($_POST)) {
+if (!isset($_SESSION['num1'], $_SESSION['num2'])) {
     $_SESSION['num1'] = rand(1, 10);
     $_SESSION['num2'] = rand(1, 10);
+}
+
+function generateCaptchaImage($num1, $num2)
+{
+    $image = imagecreatetruecolor(150, 50);
+
+    $bgColor = imagecolorallocate($image, 255, 255, 255);
+    imagefill($image, 0, 0, $bgColor);
+
+    $textColor = imagecolorallocate($image, 0, 0, 0);
+
+    imagestring($image, 5, 10, 15, "$num1 + $num2 = ?", $textColor);
+
+    ob_start();
+    imagepng($image);
+    $image_data = ob_get_contents();
+    ob_end_clean();
+
+    return base64_encode($image_data);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,18 +43,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $oncekiNum1 = $_SESSION['num1'];
     $oncekiNum2 = $_SESSION['num2'];
 
-    $_SESSION['num1'] = rand(1, 10);
-    $_SESSION['num2'] = rand(1, 10);
-
     if (isset($num1_posted, $num2_posted)) {
         $captchaSonuc = $captchaAnswer == ($num1_posted + $num2_posted);
 
         $message = $captchaSonuc ? "basarili" : "basarisiz";
 
         if ($captchaSonuc) {
-            $httpStatus = 200; 
+            $httpStatus = 200;
+            // If captcha is successful, generate new numbers for the next question
+            $_SESSION['num1'] = rand(1, 10);
+            $_SESSION['num2'] = rand(1, 10);
         } else {
-            $httpStatus = 400; 
+            $httpStatus = 400;
             $_SESSION['num1'] = $oncekiNum1;
             $_SESSION['num2'] = $oncekiNum2;
         }
@@ -44,8 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$num1 = $_SESSION['num1'];
-$num2 = $_SESSION['num2'];
+// Initialize $num1 and $num2 based on session values
+$num1 = isset($_POST['num1']) ? (int)$_POST['num1'] : $_SESSION['num1'];
+$num2 = isset($_POST['num2']) ? (int)$_POST['num2'] : $_SESSION['num2'];
 
 $sum = $num1 + $num2;
 
@@ -54,16 +74,17 @@ http_response_code($httpStatus);
 
 <!DOCTYPE html>
 <html lang="<?= $strings['lang']; ?>">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .captcha-answer {
+        .captcha-answer img {
             display: block;
         }
 
-        .wrong-answer .captcha-answer {
+        .wrong-answer .captcha-answer img {
             display: block;
         }
 
@@ -86,24 +107,20 @@ http_response_code($httpStatus);
                     </div>
                     <div class="form-group">
                         <label for="customMessage"><?= $strings['sendmessage']; ?></label>
-                        <textarea class="form-control" id="customMessage" name="customMessage" rows="3"
-                            placeholder="..."></textarea>
+                        <textarea class="form-control" id="customMessage" name="customMessage" rows="3" placeholder="..."></textarea>
                     </div>
                     <div class="form-group <?php echo ($message === "basarisiz") ? 'wrong-answer' : ''; ?>">
-    <label for="captcha"><?= $strings['captcha']; ?> <br></label>
-    <div class="d-flex justify-content-between align-items-center">
-        <?php
-        echo '<div class="captcha-answer" id="captcha-result"><label>' . $num1 . ' + ' . $num2 . ' = ?</label></div>';
-        ?>
-        <div>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="refreshCaptcha()"><?= $strings['yenile']; ?></button>
-        </div>
-    </div>
-    <input type="hidden" name="num1" value="<?= $num1; ?>">
-    <input type="hidden" name="num2" value="<?= $num2; ?>">
-    <input type="text" class="form-control" id="captcha" name="captcha"
-        placeholder="<?= $strings['captcha']; ?>" value="<?= isset($_POST['captcha']) ? htmlspecialchars($_POST['captcha']) : '' ?>">
-</div>
+                        <label for="captcha"><?= $strings['captcha']; ?> <br></label>
+                        <div class="d-flex justify-content-between align-items-center captcha-answer" id="captcha-result">
+                            <img src="data:image/png;base64,<?= generateCaptchaImage($num1, $num2) ?>" alt="Captcha Resmi" id="captcha-image">
+                            <div>
+                                <button type="button" class="btn btn-secondary btn-sm refresh-button" id="refresh-button"><?= $strings['yenile']; ?></button>
+                            </div>
+                        </div> <br>
+                        <input type="hidden" name="num1" id="num1" value="<?= $num1; ?>">
+                        <input type="hidden" name="num2" id="num2" value="<?= $num2; ?>">
+                        <input type="text" class="form-control" id="captcha" name="captcha" placeholder="<?= $strings['captcha']; ?>" value="<?= isset($_POST['captcha']) ? htmlspecialchars($_POST['captcha']) : '' ?>">
+                    </div>
                     <button type="submit" class="btn btn-primary btn-block"><?= $strings['submit']; ?></button>
                     <?php
                     if ($message === "basarili") {
@@ -116,33 +133,82 @@ http_response_code($httpStatus);
             </div>
         </div>
     </div>
-
     <script id="VLBar" title="<?= $strings['title']; ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
     <script>
-       function refreshCaptcha() {
-    var newNum1 = Math.floor(Math.random() * 10) + 1;
-    var newNum2 = Math.floor(Math.random() * 10) + 1;
+        function generateCaptchaImage(num1, num2) {
+            var image = document.createElement('canvas');
+            image.width = 150;
+            image.height = 45;
 
-    document.getElementById('captcha-result').innerHTML = newNum1 + ' + ' + newNum2 + ' = ?';
+            var context = image.getContext('2d');
+            context.fillStyle = '#ffffff';
+            context.fillRect(0, 0, 150, 50);
 
-    document.getElementsByName('num1')[0].value = newNum1;
-    document.getElementsByName('num2')[0].value = newNum2;
+            context.fillStyle = '#000000';
+            context.font = '20px Arial';
+            context.fillText(num1 + ' + ' + num2 + ' = ?', 10, 30);
 
-    document.getElementById('captcha').value = '';
+            return image;
+        }
 
-    document.getElementById('error-message').innerHTML = '';
-}
+        function refreshCaptcha() {
+            var num1 = Math.floor(Math.random() * 10) + 1;
+            var num2 = Math.floor(Math.random() * 10) + 1;
 
- function validateForm() {
-    var captchaAnswer = document.getElementById('captcha').value;
-    if (!captchaAnswer) {
-        // 'empty' ifadesini kullanarak mesajı al
-        var errorMessage = '<?= $strings["empty"]; ?>';
-        document.getElementById('error-message').innerHTML = errorMessage;
-        return false;
-    }
-    return true;
- }
+            var captchaImageContainer = document.getElementById('captcha-image');
+            captchaImageContainer.src = generateCaptchaImage(num1, num2).toDataURL();
+
+            document.getElementById('num1').value = num1;
+            document.getElementById('num2').value = num2;
+
+            document.getElementById('captcha').value = '';
+
+            var errorMessageElement = document.getElementById('error-message');
+            if (errorMessageElement) {
+                errorMessageElement.innerHTML = '';
+            }
+        }
+
+        function validateForm() {
+            var captchaAnswer = document.getElementById('captcha').value;
+            if (!captchaAnswer) {
+                var errorMessage = '<?= $strings["empty"]; ?>';
+                var errorMessageElement = document.getElementById('error-message');
+                if (errorMessageElement) {
+                    errorMessageElement.innerHTML = errorMessage;
+                }
+                return false;
+            }
+
+            var errorMessageElement = document.getElementById('error-message');
+            if (errorMessageElement) {
+                errorMessageElement.innerHTML = '';
+            }
+
+            return true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize captcha on page load
+            <?php if ($message !== 'basarisiz') { ?>
+                refreshCaptcha();
+            <?php } ?>
+
+            var refreshButton = document.getElementById('refresh-button');
+            if (refreshButton) {
+                refreshButton.addEventListener('click', function () {
+                    refreshCaptcha();
+                });
+            }
+
+            var errorMessageElement = document.getElementById('error-message');
+            var message = '<?= $message; ?>';
+
+            if (message === 'basarisiz' && errorMessageElement) {
+                errorMessageElement.innerHTML = '<?= $strings["basarisiz"]; ?>';
+            }
+        });
     </script>
 </body>
+
 </html>
