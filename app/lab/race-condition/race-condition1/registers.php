@@ -16,7 +16,7 @@ $strings = tr();
 
 <?php
 
-include( "baglanti.php" );
+include( "connection.php" );
 
 session_start();
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // If email is set, assign it to $email, otherwise assign it an empty string

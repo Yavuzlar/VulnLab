@@ -3,7 +3,7 @@
 require("../../../lang/lang.php");
 $strings = tr();
 
-include( "baglanti.php" );
+include( "connection.php" );
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ad = htmlspecialchars($_POST['ad']);
@@ -101,7 +101,7 @@ if (isset($_POST['email'])) {
       
         <div style="margin-top: 10px;"></div>
 
-        <a href="kayitlar.php" class="btn btn-danger btn-primary-sm"><?php echo $strings['registers']; ?></a>
+        <a href="registers.php" class="btn btn-danger btn-primary-sm"><?php echo $strings['registers']; ?></a>
     </div>
 </div>
 
