@@ -50,7 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($captchaSonuc) {
             $httpStatus = 200;
-            // If captcha is successful, generate new numbers for the next question
             $_SESSION['num1'] = rand(1, 10);
             $_SESSION['num2'] = rand(1, 10);
         } else {
@@ -63,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Initialize $num1 and $num2 based on session values
 $num1 = isset($_POST['num1']) ? (int)$_POST['num1'] : $_SESSION['num1'];
 $num2 = isset($_POST['num2']) ? (int)$_POST['num2'] : $_SESSION['num2'];
 
@@ -189,7 +187,7 @@ http_response_code($httpStatus);
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize captcha on page load
+
             <?php if ($message !== 'basarisiz') { ?>
                 refreshCaptcha();
             <?php } ?>
