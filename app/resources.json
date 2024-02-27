@@ -112,5 +112,13 @@
             "2": "https://iaraoz.medium.com/hacking-apis-building-the-lab-0448e817a5a8",
             "3": "https://owasp.org/www-project-api-security/"
         }
+    },
+    {
+        "id": "14",
+        "lab": "captcha-bypass,",
+        "res": {
+            "1": "https://book.hacktricks.xyz/pentesting-web/captcha-bypass/",
+            "2": "https://medium.com/@milanjain7906/how-to-bypass-captcha-3ca00389e0ac/"
+        }
     }
 ]

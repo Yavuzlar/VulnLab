@@ -1103,6 +1103,23 @@
                 },
                 "url": "/lab/captcha-bypass/bypass1",
                 "vulnID": 14
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "Broken Captcha",
+                    "tr": "Bozuk Captcha",
+                    "fr": "Captcha cassé",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Bypass captcha like a hacker, not manually.",
+                    "tr": "Captchayı manuel olarak değil bir hacker gibi atlat.",
+                    "fr": "Contournez le captcha comme un pirate informatique, pas manuellement.",
+                    "ar": ""
+                },
+                "url": "/lab/captcha-bypass/bypass/",
+                "vulnID": 14
             }
         ]
     }
