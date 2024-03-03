@@ -21,7 +21,7 @@ $strings = tr();
             <input type="hidden" name="username" value="user">
                 <button type="submit"><?php echo $strings["updatePassword"] ?></button>
             </form>
-            <a href="index.php" class="btn mt-3" style="background-color: #f00c3d;color: white; width:250px;"><?php echo $strings["updatePassword"] ?></a>
+            <a href="index.php" class="btn mt-3" style="background-color: #f00c3d;color: white; width:250px;"><?php echo $strings["logOut"] ?></a>
         </div>
     </div>
     <script id="VLBar" title="<?= $strings["title"]; ?>" category-id="13" src="/public/assets/js/vlnav.min.js"></script>
