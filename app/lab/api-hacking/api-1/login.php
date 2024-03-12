@@ -1,20 +1,20 @@
 <?php
 
-// POST isteğini kontrol et
+// Check POST request 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Kullanıcı adı ve şifreyi POST verilerinden al
+    // Get username and password from POST data
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // main.json dosyasını oku ve içeriği al
+    // Read main.json and get the content
     $data = file_get_contents('main.json');
     $users = json_decode($data, true);
 
-    // Kullanıcıları kontrol et
+    // Control users
     foreach ($users as $user) {
-        // Kullanıcı adı ve şifre eşleşirse
+        // If username and password match
         if ($user['username'] === $username && $user['password'] === $password) {
-            // Kullanıcı yönlendirme yap
+            // User redirect
             if ($username == 'admin') {
                 header("Location: adminindex.php");
                 exit();
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     }
-    // Eğer eşleşme yoksa tekrar login sayfasına yönlendir
+    // If there is no match, redirect back to the login page
     header("Location: index.php");
     exit();
 }

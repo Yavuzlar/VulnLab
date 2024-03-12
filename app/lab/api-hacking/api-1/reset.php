@@ -1,18 +1,18 @@
 <?php
-// main.json dosyasındaki kullanıcı bilgilerini varsayılan değerlere geri döndürmek için
+// To return the user information in the main.json file to default values
 
-// Varsayılan kullanıcı adı ve şifreleri tanımlayın
+// Define default usernames and passwords
 $defaultUsers = array(
     array("username" => "admin", "password" => "admin"),
     array("username" => "user", "password" => "user")
 );
 
-// JSON formatına dönüştürün
+// Convert to JSON format
 $defaultData = json_encode($defaultUsers, JSON_PRETTY_PRINT);
 
-// main.json dosyasına yazın
+// Write to main.json
 file_put_contents('main.json', $defaultData);
 
-// Index sayfasına yönlendirin
+// Redirect to Index page
 header("Location: index.php");
 exit;

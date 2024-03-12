@@ -10,28 +10,28 @@ function sendRequest($url, $data) {
     return $response;
 }
 
-// API endpoint'i
+// API endpoint
 //$apiUrl = "http://localhost:1337/lab/api-hacking/api-1/api.php";
 include "./api.php";
 
-// HTTP metodu
+// HTTP method
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Kullanıcı güncelleme (PATCH)
+// User update (POST)
 if ($method === 'POST') {
     $username = $_GET['username'];
     $newPassword = $_GET['newpassword'];
 
-    // API'ye gönderilecek veriler
+    // Data to be sent to the API
     $data = array(
         'username' => $username,
         'newpassword' => $newPassword
     );
 
-    // API'ye istek gönder
+    // Send request to API
     $response = sendRequest($apiUrl, $data);
 
-    // API'den gelen yanıtı ekrana yazdır
+    // Print the response from the API to the screen
     echo $response;
 }
 

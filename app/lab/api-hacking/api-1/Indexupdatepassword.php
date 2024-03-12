@@ -17,7 +17,7 @@ $strings = tr();
         <p><?php echo $strings["enterNewPassword"] ?></p>
         <form action="updatepassword.php" method="POST">
         <input type="hidden" name="username" value="<?php echo isset($_REQUEST['username']) ? $_REQUEST['username'] : 'default_username'; ?>">
-            <input type="text" name="newpassword" placeholder="Yeni Şifre" required><br>
+            <input type="text" name="newpassword" required><br>
             <button type="submit"><?php echo $strings["updatePassword"] ?></button>
         </form>
     </div>
