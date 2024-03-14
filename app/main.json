@@ -1011,7 +1011,7 @@
             "fr": "Le piratage d'API fait brièvement référence aux attaques malveillantes sur les API d'une application ou d'un système. Les API (Application Programming Interface) sont des interfaces qui permettent aux applications logicielles de communiquer entre elles. De nombreux services web et applications échangent des données et étendent leurs fonctionnalités par le biais d'API.",
             "ar": ""
         },
-        "imgURL": "public/assets/img/vulns/API.png",
+        "imgURL": "public/assets/img/vulns/api.png",
         "labs": [
             {
                 "id": 1,
