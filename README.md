@@ -15,7 +15,7 @@
     <img src="https://s10.gifyu.com/images/Animation387bbf064343cb3fe.gif" alt="Logo"  >
 </a>
 
-<!-- Vulnerabilities -->
+<!-- Vulnerabilities List -->
 ## Vulnerabilities
 
 * SQL Injection
@@ -28,6 +28,9 @@
 * File Upload
 * File Inclusion
 * Broken Authentication
+* Race Condition
+* Server Side Template Injection (SSTI)
+* API Hacking
 
 <!-- Installation -->
 ## Installation

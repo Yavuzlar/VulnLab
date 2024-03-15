@@ -57,6 +57,7 @@ const headerElStyle = `
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 9999;
 `
 
 const headerWrapperStyle = `
