@@ -46,19 +46,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($num1_posted, $num2_posted)) {
         $captchaSonuc = $captchaAnswer == ($num1_posted + $num2_posted);
 
-        $message = $captchaSonuc ? "basarili" : "basarisiz";
+        $message = $captchaSonuc ? "successful" : "unsuccessful";
 
         if ($captchaSonuc) {
             $httpStatus = 200;
             $_SESSION['num1'] = rand(1, 10);
             $_SESSION['num2'] = rand(1, 10);
+
+            $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '';
+            $customMessage = isset($_POST['customMessage']) ? htmlspecialchars($_POST['customMessage']) : '';
+
+            $submittedMessage = "$username, $customMessage";
+            $_SESSION['messages'][] = $submittedMessage;
         } else {
             $httpStatus = 400;
             $_SESSION['num1'] = $oncekiNum1;
             $_SESSION['num2'] = $oncekiNum2;
         }
     } else {
-        $message = $strings['basarisiz'];
+        $message = $strings['unsuccessful'];
     }
 }
 
@@ -107,12 +113,12 @@ http_response_code($httpStatus);
                         <label for="customMessage"><?= $strings['sendmessage']; ?></label>
                         <textarea class="form-control" id="customMessage" name="customMessage" rows="3" placeholder="..."></textarea>
                     </div>
-                    <div class="form-group <?php echo ($message === "basarisiz") ? 'wrong-answer' : ''; ?>">
+                    <div class="form-group <?php echo ($message === "unsuccessful") ? 'wrong-answer' : ''; ?>">
                         <label for="captcha"><?= $strings['captcha']; ?> <br></label>
                         <div class="d-flex justify-content-between align-items-center captcha-answer" id="captcha-result">
                             <img src="data:image/png;base64,<?= generateCaptchaImage($num1, $num2) ?>" alt="Captcha Resmi" id="captcha-image">
                             <div>
-                                <button type="button" class="btn btn-secondary btn-sm refresh-button" id="refresh-button"><?= $strings['yenile']; ?></button>
+                                <button type="button" class="btn btn-secondary btn-sm refresh-button" id="refresh-button"><?= $strings['refresh']; ?></button>
                             </div>
                         </div> <br>
                         <input type="hidden" name="num1" id="num1" value="<?= $num1; ?>">
@@ -120,11 +126,12 @@ http_response_code($httpStatus);
                         <input type="text" class="form-control" id="captcha" name="captcha" placeholder="<?= $strings['captcha']; ?>" value="<?= isset($_POST['captcha']) ? htmlspecialchars($_POST['captcha']) : '' ?>">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block"><?= $strings['submit']; ?></button>
+                    <a href="view_messages.php" class="btn btn-danger btn-block"><?= $strings['view_messages']; ?></a>
                     <?php
-                    if ($message === "basarili") {
-                        echo '<p class="mt-3 text-success">' . $strings['basarili'] . '</p>';
-                    } elseif ($message === "basarisiz") {
-                        echo '<p id="error-message" class="mt-3 text-danger">' . $strings['basarisiz'] . '</p>';
+                    if ($message === "successful") {
+                        echo '<p class="mt-3 text-success">' . $strings['successful'] . '</p>';
+                    } elseif ($message === "unsuccessful") {
+                        echo '<p id="error-message" class="mt-3 text-danger">' . $strings['unsuccessful'] . '</p>';
                     }
                     ?>
                 </form>
@@ -188,7 +195,7 @@ http_response_code($httpStatus);
 
         document.addEventListener('DOMContentLoaded', function () {
 
-            <?php if ($message !== 'basarisiz') { ?>
+            <?php if ($message !== 'unsuccessful') { ?>
                 refreshCaptcha();
             <?php } ?>
 
@@ -202,8 +209,8 @@ http_response_code($httpStatus);
             var errorMessageElement = document.getElementById('error-message');
             var message = '<?= $message; ?>';
 
-            if (message === 'basarisiz' && errorMessageElement) {
-                errorMessageElement.innerHTML = '<?= $strings["basarisiz"]; ?>';
+            if (message === 'unsuccessful' && errorMessageElement) {
+                errorMessageElement.innerHTML = '<?= $strings["unsuccessful"]; ?>';
             }
         });
     </script>
