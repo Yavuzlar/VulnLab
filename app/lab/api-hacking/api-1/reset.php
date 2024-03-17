@@ -1,5 +1,5 @@
 <?php
-// To return the user information in the main.json file to default values
+// To return the user information in the main1.json file to default values
 
 // Define default usernames and passwords
 $defaultUsers = array(
@@ -10,8 +10,8 @@ $defaultUsers = array(
 // Convert to JSON format
 $defaultData = json_encode($defaultUsers, JSON_PRETTY_PRINT);
 
-// Write to main.json
-file_put_contents('main.json', $defaultData);
+// Write to main1.json
+file_put_contents('main1.json', $defaultData);
 
 // Redirect to Index page
 header("Location: index.php");
