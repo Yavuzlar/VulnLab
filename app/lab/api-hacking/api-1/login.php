@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Read main.json and get the content
-    $data = file_get_contents('main.json');
+    // Read main1.json and get the content
+    $data = file_get_contents('main1.json');
     $users = json_decode($data, true);
 
     // Control users
