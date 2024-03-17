@@ -1,12 +1,12 @@
 <?php
 function readData() {
-    $data = file_get_contents('main.json');
+    $data = file_get_contents('main1.json');
     return json_decode($data, true);
 }
 
 function writeData($data) {
     $jsonData = json_encode($data, JSON_PRETTY_PRINT);
-    file_put_contents('main.json', $jsonData);
+    file_put_contents('main1.json', $jsonData);
 }
 
 $method = $_SERVER['REQUEST_METHOD'];
