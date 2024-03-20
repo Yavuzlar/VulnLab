@@ -23,7 +23,7 @@ $email = isset($_SESSION['email']) ? $_SESSION['email'] : ''; // If email is set
 
 if (isset($_POST['silButton'])) {
 
-    $sql = "DELETE FROM kayit WHERE email = :email";
+    $sql = "DELETE FROM kayit";
     $stmt = $db->prepare($sql);
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     
