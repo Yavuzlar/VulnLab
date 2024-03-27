@@ -6,7 +6,7 @@ $lang = tr();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?php echo $lang['title']; ?></title>
+    <title>Path Traversal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .urun-karti {
@@ -61,6 +61,6 @@ $lang = tr();
             ?>
         </div>
     </div>
-    <script id="VLBar" title="<?= $lang["title"]; ?>" category-id="9" src="/public/assets/js/vlnav.min.js"></script>
+    <script id="VLBar" title="Path Traversal" category-id="15" src="/public/assets/js/vlnav.min.js"></script>
 </body>
 </html>

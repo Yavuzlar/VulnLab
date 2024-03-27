@@ -1142,9 +1142,9 @@
             {
                 "id": 1,
                 "title": {
-                    "en": "Path Traversal",
-                    "tr": "Path Traversal",
-                    "fr": "Path Traversal",
+                    "en": "Path Traversal Blacklist",
+                    "tr": "Path Traversal Blacklist",
+                    "fr": "Path Traversal Blacklist",
                     "ar": ""
                 },
                 "description": {
