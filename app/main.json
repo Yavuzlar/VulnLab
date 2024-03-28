@@ -1137,7 +1137,7 @@
             "fr": "La faille de sécurité de type 'path traversal' permet aux attaquants d'accéder aux fichiers du serveur en exploitant les failles de sécurité d'une application web. Cela crée un potentiel d'accès à des informations sensibles, de manipulation de fichiers ou de dommages au système.",
             "ar": ""
         },
-        "imgURL": "public/assets/img/vulns/captcha.png",
+        "imgURL": "public/assets/img/vulns/path-traversal.png",
         "labs": [
             {
                 "id": 1,
@@ -1153,7 +1153,7 @@
                     "fr": "Si vous vous lancez dans un voyage parmi les fichiers, sachez que certaines portes peuvent ne pas s'ouvrir directement. Mais laissez-moi vous dire un secret : certains chemins sinueux peuvent vous aider à atteindre des destinations inattendues. Ne vous inquiétez pas, vous ne vous perdrez pas dans ce voyage mystérieux ; cela nécessite juste un peu de ruse ;)",
                     "ar": ""
                 },
-                "url": "/lab/pathtraversal/pathtraversal-2",
+                "url": "/lab/path-traversal/path-traversal-2",
                 "vulnID": 15
             }
         ]

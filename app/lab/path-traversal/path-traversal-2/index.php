@@ -2,24 +2,24 @@
 $lang = tr();
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Path Traversal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .urun-karti {
+        .product-card {
             margin-bottom: 20px;
             cursor: pointer;
         }
 
-        .urun-karti img {
+        .product-card img {
             max-width: 100%;
             height: auto;
         }
 
-        .urun-karti-baslik {
+        .product-card-header {
             margin-top: 10px;
         }
     </style>
@@ -35,10 +35,10 @@ $lang = tr();
                     $imageName = $i . ".png";
 
                     echo '<div class="col-md-3">';
-                    echo '<div class="urun-karti">';
+                    echo '<div class="product-card">';
                     echo '<a href="product-detail.php?productId=' . $productId . '.png' . '">';
                     echo '<img src="img/' . $imageName . '">';
-                    echo '<h4 class="urun-karti-baslik">';
+                    echo '<h4 class="product-card-header">';
                     switch ($productId) {
                         case 1:
                             echo $lang['productTitle1'];

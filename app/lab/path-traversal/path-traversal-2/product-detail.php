@@ -2,19 +2,19 @@
 $lang = tr();
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Path Traversal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .detay-kapsayici {
+        .detail-inclusive {
             text-align: center;
             margin-top: 50px;
         }
 
-        .detay-kapsayici img {
+        .detail-inclusive img {
             max-width: 100%;
             height: auto;
         }
@@ -22,7 +22,7 @@ $lang = tr();
 </head>
 <body>
     <div class="container mt-5">
-        <div class="detay-kapsayici">
+        <div class="detail-inclusive">
             <?php
                 $productId = $_GET['productId'];
                 
