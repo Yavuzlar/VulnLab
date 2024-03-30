@@ -120,5 +120,13 @@
             "1": "https://book.hacktricks.xyz/pentesting-web/captcha-bypass/",
             "2": "https://medium.com/@milanjain7906/how-to-bypass-captcha-3ca00389e0ac/"
         }
+    },
+    {
+        "id": "15",
+        "lab": "Path Traversal",
+        "res": {
+            "1": "https://portswigger.net/web-security/file-path-traversal",
+            "2": "https://book.hacktricks.xyz/pentesting-web/file-inclusion"
+        }
     }
 ]

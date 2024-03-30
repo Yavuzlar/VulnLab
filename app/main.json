@@ -1122,5 +1122,40 @@
                 "vulnID": 14
             }
         ]
+    },
+    {
+        "id": 15,
+        "title": {
+            "en": "Path Traversal",
+            "tr": "Path Traversal",
+            "fr": "Path Traversal",
+            "ar": ""
+        },
+        "description": {
+            "en": "Path traversal is a security vulnerability that allows attackers to access server files by exploiting security flaws in a web application. This creates the potential for accessing sensitive information, manipulating files, or causing damage to the system.",
+            "tr": "Path traversal, saldırganların web uygulamasındaki güvenlik açıklarını kullanarak sunucu dosyalarına erişim sağlamasına olanak tanıyan bir güvenlik zafiyetidir. Bu, hassas bilgilere erişim, dosyaların manipülasyonu veya sisteme zarar verme potansiyeli yaratır.",
+            "fr": "La faille de sécurité de type 'path traversal' permet aux attaquants d'accéder aux fichiers du serveur en exploitant les failles de sécurité d'une application web. Cela crée un potentiel d'accès à des informations sensibles, de manipulation de fichiers ou de dommages au système.",
+            "ar": ""
+        },
+        "imgURL": "public/assets/img/vulns/path-traversal.png",
+        "labs": [
+            {
+                "id": 1,
+                "title": {
+                    "en": "Path Traversal Blacklist",
+                    "tr": "Path Traversal Blacklist",
+                    "fr": "Path Traversal Blacklist",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "If you're embarking on a file journey, know that some doors might not open directly. But let me tell you a secret: Some winding paths can help you reach unexpected destinations. Don't worry, you won't get lost on this mysterious journey; it just requires a bit of cunning ;)",
+                    "tr": "Eğer bir dosya yolculuğuna çıkmak istiyorsan, bil ki bazı kapılar doğrudan açılmayabilir. Ama sana bir sır vereyim: Bazı dolambaçlı yollar, beklenmedik hedeflere ulaşmana yardımcı olabilir. Merak etme, bu gizemli yolculukta kaybolmazsın, sadece biraz kurnazlık gerekebilir ;)",
+                    "fr": "Si vous vous lancez dans un voyage parmi les fichiers, sachez que certaines portes peuvent ne pas s'ouvrir directement. Mais laissez-moi vous dire un secret : certains chemins sinueux peuvent vous aider à atteindre des destinations inattendues. Ne vous inquiétez pas, vous ne vous perdrez pas dans ce voyage mystérieux ; cela nécessite juste un peu de ruse ;)",
+                    "ar": ""
+                },
+                "url": "/lab/path-traversal/path-traversal-2",
+                "vulnID": 15
+            }
+        ]
     }
 ]
