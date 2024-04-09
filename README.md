@@ -31,6 +31,8 @@
 * Race Condition
 * Server Side Template Injection (SSTI)
 * API Hacking
+* Captcha Bypass
+* Path Traversal
 
 <!-- Installation -->
 ## Installation
