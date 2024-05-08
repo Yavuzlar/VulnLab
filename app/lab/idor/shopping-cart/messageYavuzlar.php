@@ -15,7 +15,7 @@ if (isset($_POST['message'])) {
     if($message == "R3DT3AM"){
         $query = $conn->prepare("INSERT INTO shopYavuzlar(content, corner) VALUES (?, ?)");
         $query->execute(array(
-            "https://book.siberyavuzlar.com/",
+            "https://docs.yavuzlar.org/",
             0,
         ));
     }
