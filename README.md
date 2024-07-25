@@ -45,7 +45,7 @@
    ```
 2. Go to http://localhost:1337
 
-### Manuel Installation
+### Manual Installation
 
 1. Clone the repo
    ```sh
