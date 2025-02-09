@@ -104,13 +104,21 @@
             "1": "https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection"
         }
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> bab6308f19302d31407a97fe2766786a6ea75ec8
     {
         "id": "13",
         "lab": "API Hacking",
         "res": {
+<<<<<<< HEAD
             "1": "https://portswigger.net/web-security/api-testing",
             "2": "https://iaraoz.medium.com/hacking-apis-building-the-lab-0448e817a5a8",
             "3": "https://owasp.org/www-project-api-security/"
+=======
+            "1": "https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/web-api-pentesting"
+>>>>>>> bab6308f19302d31407a97fe2766786a6ea75ec8
         }
     },
     {
@@ -129,4 +137,4 @@
             "2": "https://book.hacktricks.xyz/pentesting-web/file-inclusion"
         }
     }
-]
+] 

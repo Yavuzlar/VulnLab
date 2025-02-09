@@ -1041,6 +1041,7 @@
         "title": {
             "en": "API Hacking",
             "tr": "API Saldırısı",
+<<<<<<< HEAD
             "fr": "Violation de l'API",
             "ar": ""
         },
@@ -1048,6 +1049,15 @@
             "en": "API hacking is a type of attack where malicious individuals or hackers attempt to gain unauthorized access to applications or systems through an API.",
             "tr": "API saldırısı, kötü niyetli kişilerin veya hacker'ların, bir API üzerinden uygulama veya sistemlere yetkisiz erişim elde etmeye çalıştığı bir saldırı türüdür.",
             "fr": "L'API hacking est un type d'attaque où des individus malveillants ou des pirates informatiques tentent d'obtenir un accès non autorisé à des applications ou des systèmes via une API.",
+=======
+            "fr": "API Hacking", 
+            "ar": ""
+        },
+        "description": {
+            "en": "API hacking is the act of exploiting vulnerabilities in an application or web deployment API by using it for malicious purposes. Such attacks can result in unauthorized access, leaking data at sensitive intervals, or denial of service.",
+            "tr": "API hacking, bir uygulamanın veya web sitesinin API'sini kötü niyetli amaçlarla kullanarak güvenlik açıklarını sömürme eylemidir. Bu tür saldırılar, yetkisiz erişim elde etmek, hassas verilere erişmek, veri sızdırmak veya hizmeti engellemek gibi sonuçlar doğurabilir.",
+            "fr": "Le piratage d'API consiste à exploiter les vulnérabilités d'une application ou d'une API de déploiement Web en l'utilisant à des fins malveillantes. De telles attaques peuvent entraîner un accès non autorisé, une fuite de données à des intervalles sensibles ou un déni de service.",
+>>>>>>> bab6308f19302d31407a97fe2766786a6ea75ec8
             "ar": ""
         },
         "imgURL": "public/assets/img/vulns/api.png",
@@ -1055,6 +1065,7 @@
             {
                 "id": 1,
                 "title": {
+<<<<<<< HEAD
                     "en": "API Documentation",
                     "tr": "API Belgeleri",
                     "fr": "Documentation de l'API",
@@ -1067,6 +1078,23 @@
                     "ar": ""
                 },
                 "url": "/lab/api-hacking/api-hacking1/",
+                "vulnID": 13
+            },
+            {
+                "id": 2,
+                "title": {
+                    "en": "API Hacking with IDOR 2",
+                    "tr": "IDOR ile API Hacking 2",
+                    "fr":  "Piratage d'API avec IDOR 2",
+                    "ar": ""
+                },
+                "description": {
+                    "en": "Manipulate the API to modify articles of different users.",
+                    "tr": "API'yi manipüle ederek farklı kullanıcıların makalelerini değiştiriniz.",
+                    "fr": "Manipulez l'API pour modifier les articles d'autres utilisateurs.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/API-HACKING2/",
                 "vulnID": 13
             }
         ]
@@ -1157,5 +1185,23 @@
                 "vulnID": 15
             }
         ]
+=======
+                    "en": "Running Scripts with API Hacking",
+                    "tr": "API Hacking ile Script Çalıştırma",
+                    "fr": "Exécuter des scripts avec le piratage d'API",
+                    "ar": ""
+                    
+                },
+                "description": {
+                    "en": "Find a way to suppress the 1 per page warning.",
+                    "tr": "Sayfada 1 uyarısı bastırmanın bir yolunu bulunuz.",
+                    "fr": "Trouvez un moyen de supprimer l’avertissement 1 par page.",
+                    "ar": ""
+                },
+                "url": "/lab/api-hacking/api-hacking/",
+                "vulnID": 13
+            }
+        ]
+>>>>>>> bab6308f19302d31407a97fe2766786a6ea75ec8
     }
 ]
